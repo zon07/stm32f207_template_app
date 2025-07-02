@@ -1,0 +1,3053 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BackEH_TPH_Hande KeylessController ArmrestConsole LightConsole_KUO BackEH_S6_Hande BackEH_S5_Hande BackEH_S4_Hande BackEH_S3_Hande BackEH_S2_Hande BackEH_S1_Hande Radar_DIS01 Engine TCU DisplayHMI BU702_E4 BU702_E3 CabController
+VAL_TABLE_ IgnitionStatuses 15 "UNDEF" 3 "START" 2 "ON" 1 "ACC" 0 "OFF" ;
+VAL_TABLE_ FanDriveModes 255 "Undef" 2 "ManualPwm" 1 "ManualRpm" 0 "Auto" ;
+VAL_TABLE_ KuoFieldLights 7 "White" 3 "Green" 0 "Off" ;
+VAL_TABLE_ KuoBtnLights 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_TABLE_ RiomNiModesConfigs 0 "PullUp_Off_Passive" 1 "PullUp_On_Active" ;
+VAL_TABLE_ RiomPwmFreqConfigs 5 "1000Hz" 4 "500Hz" 3 "300Hz" 2 "200Hz" 1 "100Hz" 0 "Undef" ;
+VAL_TABLE_ RiomPwmModes 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_TABLE_ RiomPwmDiagConfigs 1 "DiagOn" 0 "DiagOff" ;
+VAL_TABLE_ RiomDiPullUpConfigs 2 "PullDown" 1 "PullUp" 0 "Undef" ;
+VAL_TABLE_ RiomSignalTimings 15 "100s" 14 "60s" 13 "50s" 12 "20s" 11 "10s" 10 "5s" 9 "2s" 8 "1s" 7 "500ms" 6 "250ms" 5 "100ms" 4 "50ms" 3 "25ms" 2 "20ms" 1 "10ms" 0 "Undef" ;
+VAL_TABLE_ RiomSignalTypes 5 "PWM" 4 "NI" 3 "UIR" 2 "DO" 1 "DI" 0 "UNDEF" ;
+VAL_TABLE_ RiomUirModes 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_TABLE_ RiomChStatuses 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ AcPedalMode : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PowerTakeoffSetSpeed : 0|16@1+ (0.125,0) [0|8031.875] "rpm" Vector__XXX
+ SG_ PowerTakeoffSpeed : 0|16@1+ (0.125,0) [0|8031.875] "rpm" Vector__XXX
+ SG_ RearTphSnsCalibSts : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2565805105 SUSP_CTRL: 8 CabController
+
+BO_ 2566799409 LD: 8 CabController
+ SG_ WorkLights : 50|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ TractorClearanceLight : 26|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ LeftTurnSignalLights : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RightTurnSignalLights : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RotatingBeaconLight : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HighBeamHeadLight : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ LowBeamHeadLight : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566858280 DISP_CONFGS1: 8 DisplayHMI
+ SG_ DispWorkToolWidth : 0|16@1+ (0.1,0) [0|6553.5] "m"  CabController
+ SG_ DispSlipConfig : 16|8@1+ (1,0) [0|100] "%"  CabController
+ SG_ DispAccelPedalMode : 24|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2566881585 ONBSYS_INFO2: 8 CabController
+ SG_ RearPtoSpeed : 0|16@1+ (0.125,0) [0|8031.875] "rpm"  DisplayHMI
+ SG_ FrontPtoSpeed : 16|16@1+ (0.125,0) [0|8031.875] "rpm"  DisplayHMI
+
+BO_ 2566856744 TURNSLIP_STS: 8 CabController
+ SG_ TurnStripStatus : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ TurnStripState : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566883121 ACPEDAL_CALIBSTS: 8 CabController
+ SG_ AcPedalUpSavedVoltage : 16|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ AcPedalSnsCalibSts : 0|4@1+ (1,0) [0|15] ""  DisplayHMI
+ SG_ AcPedalSensVoltage : 8|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ AcPedalDownSavedVoltage : 24|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ CalibrationTime : 32|32@1+ (1,0) [0|4294967295] "s"  DisplayHMI
+
+BO_ 2566858024 PTO_CONFIG: 8 DisplayHMI
+ SG_ PtoRearMinSpeed : 8|8@1+ (10,0) [0|2500] "rpm"  CabController
+ SG_ PtoRearMaxSpeed : 0|8@1+ (10,0) [0|2500] "rpm"  CabController
+ SG_ PtoFrontMinSpeed : 24|8@1+ (10,0) [0|2500] "rpm"  CabController
+ SG_ PtoFrontMaxSpeed : 16|8@1+ (10,0) [0|2500] "rpm"  CabController
+
+BO_ 2566882865 FTPH_STS: 8 CabController
+ SG_ FrontTphSnsCalibSts : 0|4@1+ (1,0) [0|15] ""  DisplayHMI
+ SG_ FrontTphUpSavedVoltage : 16|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ FrontTphSensVoltage : 8|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ FrontTphDownSavedVoltage : 24|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ CalibrationTime : 32|32@1+ (1,0) [0|4294967295] "s"  DisplayHMI
+
+BO_ 2566882609 RTPH_STS: 8 CabController
+ SG_ RearTphSnsCalibSts : 0|4@1+ (1,0) [0|15] ""  DisplayHMI
+ SG_ RearTphUpSavedVoltage : 16|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ RearTphSensVoltage : 8|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ RearTphDownSavedVoltage : 24|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ CalibrationTime : 32|32@1+ (1,0) [0|4294967295] "s"  DisplayHMI
+
+BO_ 2565472289 RQST00_21: 8 CabController
+ SG_ RequestedPGN : 0|24@1+ (1,0) [0|16777215] ""  Engine
+
+BO_ 2565472305 RQST00_31: 8 CabController
+ SG_ RequestedPGN : 0|24@1+ (1,0) [0|16777215] ""  Engine
+
+BO_ 2566841088 EC1: 39 Engine
+ SG_ EngineReferenceTorque : 152|16@1+ (1,0) [0|64255] "Nm"  CabController
+
+BO_ 2565537576 RQSTFF_28: 8 DisplayHMI
+ SG_ RequestedPGN : 0|24@1+ (1,0) [0|16777215] "" Vector__XXX
+
+BO_ 2565472296 RQST00_28: 8 DisplayHMI
+ SG_ RequestedPGN : 0|24@1+ (1,0) [0|16777215] ""  Engine
+
+BO_ 2566834822 DM1_S6: 8 BackEH_S6_Hande
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834821 DM1_S5: 8 BackEH_S5_Hande
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834820 DM1_S4: 8 BackEH_S4_Hande
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834819 DM1_S3: 8 BackEH_S3_Hande
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834818 DM1_S2: 8 BackEH_S2_Hande
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834817 DM1_S1: 8 BackEH_S1_Hande
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834816 DM1_S0: 8 BackEH_TPH_Hande
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834691 DM1_T: 8 TCU
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834743 DM1_LC: 8 LightConsole_KUO
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834913 DM1_A: 8 ArmrestConsole
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566834740 DM1_KC: 8 KeylessController
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566852660 KEYLESS_STATUS: 8 KeylessController
+ SG_ KeylessControllerStatus : 0|4@1+ (1,0) [0|0] ""  CabController
+
+BO_ 2566860840 ARM_LIGHTS: 8 DisplayHMI
+ SG_ ArmButtonC28 : 40|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC27 : 38|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC26 : 36|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC25 : 34|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC24 : 32|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC23 : 30|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC22 : 28|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC21 : 26|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC20 : 24|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ARM_Brightness_G : 16|8@1+ (1,0) [0|100] "%"  CabController
+ SG_ ARM_Brightness_C : 8|8@1+ (1,0) [0|100] "%"  CabController
+ SG_ ARM_Brightness_AEH : 0|8@1+ (1,0) [0|100] "%"  CabController
+
+BO_ 2566861864 ARM_C_BTNS_L2: 8 CabController
+ SG_ ArmButtonIndC32 : 30|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC31 : 27|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC30 : 24|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC29 : 21|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC28 : 18|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC27 : 15|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC26 : 12|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC25 : 9|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC24 : 6|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC23 : 3|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC22 : 0|3@1+ (1,0) [0|7] ""  ArmrestConsole
+
+BO_ 2566861608 ARM_C_BTNS_L1: 8 CabController
+ SG_ ArmButtonIndC21 : 60|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC20 : 57|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC19 : 54|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC18 : 51|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC17 : 48|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC16 : 45|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC15 : 42|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC14 : 39|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC13 : 36|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC12 : 33|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC11 : 30|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC10 : 27|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC9 : 24|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC8 : 21|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC7 : 18|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC6 : 15|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC5 : 12|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC4 : 9|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC3 : 6|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC2 : 3|3@1+ (1,0) [0|7] ""  ArmrestConsole
+ SG_ ArmButtonIndC1 : 0|3@1+ (1,0) [0|7] ""  ArmrestConsole
+
+BO_ 2566850529 ARM_FE: 8 ArmrestConsole
+ SG_ ArmButton_E5 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButton_E4 : 6|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButton_E3 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButton_E2 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButton_E1 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2566849761 ARM_ENC: 8 ArmrestConsole
+ SG_ ArmEncoderSmallRightRotation : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ArmEncoderSmallLeftRotation : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ArmEncoderBigLeftRotation : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ArmEncoderBigRightRotation : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566849505 ARM_FC: 8 ArmrestConsole
+ SG_ ArmButtonC9 : 16|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC8 : 14|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC7 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC6 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC5 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC4 : 6|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC32 : 62|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC31 : 60|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC30 : 58|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC3 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC29 : 56|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC28 : 54|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC27 : 52|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC26 : 50|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC25 : 48|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC24 : 46|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC23 : 44|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC22 : 42|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC21 : 40|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC20 : 38|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC2 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC19 : 36|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC18 : 34|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC17 : 32|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC16 : 30|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC15 : 28|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC14 : 26|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC13 : 24|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC12 : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC11 : 20|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC10 : 18|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonC1 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2365526753 ARM_FNR: 8 ArmrestConsole
+ SG_ ArmJoystickPos_A15_3 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmJoystickPos_A15_2 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmJoystickPos_A15_1 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmJoystickPos_A15 : 0|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2365526497 ARM_FA: 8 ArmrestConsole
+ SG_ ArmRegPosA12_4 : 62|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA12_3 : 60|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA12_2 : 58|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA12_1 : 56|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA12 : 48|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmRegPosA11_4 : 46|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA11_3 : 44|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA11_2 : 42|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA11_1 : 40|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegPosA11 : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmButtonA9 : 16|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA8 : 14|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA7 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA6 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA5 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA4 : 6|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA3 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA2 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA14_2 : 30|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA14_1 : 28|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA13 : 26|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA10 : 18|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmButtonA1 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2365523681 ARM_FH: 8 ArmrestConsole
+ SG_ ArmRearPtoOn : 2|2@1+ (1,0) [0|3] ""  DisplayHMI,CabController
+ SG_ ArmRearPtoOff : 4|2@1+ (1,0) [0|3] ""  DisplayHMI,CabController
+ SG_ ArmFrontPtoOn : 6|2@1+ (1,0) [0|3] ""  DisplayHMI,CabController
+ SG_ ArmFrontPtoOff : 0|2@1+ (1,0) [0|3] ""  DisplayHMI,CabController
+ SG_ ArmDepthReg : 8|10@1+ (0.1,0) [0|100] "%"  DisplayHMI,CabController
+
+BO_ 2365523425 ARM_FG: 8 ArmrestConsole
+ SG_ ArmButton_G2 : 18|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ArmButton_G1 : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ArmRegButton_G3_4 : 14|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegButton_G3_3 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegButton_G3_2 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmRegButton_G3_1 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmReg_G4_2 : 56|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmReg_G4_1 : 48|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmReg_G3 : 0|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2365522657 ARM_FD: 8 ArmrestConsole
+ SG_ ArmKeyPos_D6_4 : 46|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D6_3 : 44|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D6_2 : 42|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D6_1 : 40|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D6 : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmKeyPos_D5_4 : 30|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D5_3 : 28|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D5_2 : 26|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D5_1 : 24|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D5 : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmKeyPos_D4_4 : 14|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D4_3 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D4_2 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D4_1 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D4 : 0|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2365522401 ARM_FBD: 8 ArmrestConsole
+ SG_ ArmKeyPos_D3_4 : 62|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D3_3 : 60|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D3_2 : 58|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D3_1 : 56|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D3 : 48|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmKeyPos_D2_4 : 46|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D2_3 : 44|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D2_2 : 42|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D2_1 : 40|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D2 : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmKeyPos_D1_4 : 30|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D1_3 : 28|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D1_2 : 26|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D1_1 : 24|2@1+ (1,0) [0|3] ""  CabController
+ SG_ ArmKeyPos_D1 : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ ArmManualThrottlePos : 0|10@1+ (0.1,0) [0|100] ""  CabController
+
+BO_ 2566853928 EH_CONFIG_SECTION5: 8 DisplayHMI
+ SG_ EhSectionWorkTime : 24|8@1+ (1,0) [0|250] "%"  CabController
+ SG_ EhSectionRectractFlow : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionMode : 0|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionExtendFlow : 8|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionCurveType : 4|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionBoostRectractFlow : 40|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionBoostExtendFlow : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566853672 EH_CONFIG_SECTION4: 8 DisplayHMI
+ SG_ EhSectionWorkTime : 24|8@1+ (1,0) [0|250] "%"  CabController
+ SG_ EhSectionRectractFlow : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionMode : 0|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionExtendFlow : 8|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionCurveType : 4|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionBoostRectractFlow : 40|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionBoostExtendFlow : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566854184 EH_CONFIG_SECTION6: 8 DisplayHMI
+ SG_ EhSectionWorkTime : 24|8@1+ (1,0) [0|250] "%"  CabController
+ SG_ EhSectionRectractFlow : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionMode : 0|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionExtendFlow : 8|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionCurveType : 4|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionBoostRectractFlow : 40|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionBoostExtendFlow : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566853416 EH_CONFIG_SECTION3: 8 DisplayHMI
+ SG_ EhSectionWorkTime : 24|8@1+ (1,0) [0|250] "%"  CabController
+ SG_ EhSectionRectractFlow : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionMode : 0|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionExtendFlow : 8|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionCurveType : 4|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionBoostRectractFlow : 40|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionBoostExtendFlow : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566853160 EH_CONFIG_SECTION2: 8 DisplayHMI
+ SG_ EhSectionWorkTime : 24|8@1+ (1,0) [0|250] "%"  CabController
+ SG_ EhSectionRectractFlow : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionMode : 0|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionExtendFlow : 8|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionCurveType : 4|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionBoostRectractFlow : 40|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionBoostExtendFlow : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566852904 EH_CONFIG_SECTION1: 8 DisplayHMI
+ SG_ EhSectionWorkTime : 24|8@1+ (1,0) [0|250] "%"  CabController
+ SG_ EhSectionRectractFlow : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionMode : 0|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionExtendFlow : 8|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionCurveType : 4|4@1+ (1,0) [0|15] ""  CabController
+ SG_ EhSectionBoostRectractFlow : 40|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ EhSectionBoostExtendFlow : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566852648 TPH_CONFIG: 8 DisplayHMI
+ SG_ TphRearConfUpSpeed : 8|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ TphRearConfSlipAgressive : 48|8@1+ (1,0) [0|100] "%"  CabController
+ SG_ TphRearConfFloatMode : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ TphRearConfDraftMode : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ TphRearConfDraftHeight : 40|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ TphRearConfDownSpeed : 16|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ TphRearConfAutoMin : 32|8@1+ (0.4,0) [0|100] "%"  CabController
+ SG_ TphRearConfAutoMax : 24|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566795298 AVC_Valve0: 8 CabController
+ SG_ AVC_ValveState : 16|4@1+ (1,0) [0|15] ""  DisplayHMI,BackEH_TPH_Hande
+ SG_ AVC_ValvePortFlowCmd : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI,BackEH_TPH_Hande
+ SG_ AVC_ValveFailsafeModeCmd : 22|2@1+ (1,0) [0|3] ""  DisplayHMI,BackEH_TPH_Hande
+
+BO_ 2566787200 AVE_Valve0: 8 BackEH_TPH_Hande
+ SG_ AVE_ValveState : 16|4@1+ (1,0) [0|15] ""  CabController
+ SG_ AVE_ValveFailsafeMode : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ AVE_RetractEstimatedFlow : 8|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ AVE_ExtendEstimatedFlow : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2566897192 FD1_CONF: 8 DisplayHMI
+ SG_ FdSetMode : 0|4@1+ (1,0) [0|15] ""  CabController
+ SG_ FdManualSpeedCmd : 8|16@1+ (0.125,0) [0|8031.875] "rpm"  CabController
+ SG_ FdManualPwmCmd : 24|8@1+ (0.4,0) [0|100] "%"  CabController
+
+BO_ 2566897230 FD1_CS: 8 CabController
+ SG_ FdPwmDC : 0|16@1+ (0.01,0) [0|100] "%" Vector__XXX
+ SG_ FdInputSpeed : 16|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FdFanCommand : 32|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+ SG_ FdActualFanSpeed : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2566831438 FD1: 8 CabController
+ SG_ FanSpeed : 16|16@1+ (0.125,0) [0|8031.875] "rpm"  DisplayHMI
+ SG_ FanDriveState : 8|4@1+ (1,0) [0|15] ""  DisplayHMI
+ SG_ EstimatedPercentFanSpeed : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+
+BO_ 2164217137 RIOM_PWM_CMD_G6: 8 CabController
+ SG_ PWM_CMD_16 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_15 : 16|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_16 : 10|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_15 : 8|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+
+BO_ 2164216881 RIOM_PWM_CMD_G5: 8 CabController
+ SG_ PWM_CMD_14 : 48|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_13 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_12 : 16|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_14 : 12|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_13 : 10|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_12 : 8|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+
+BO_ 2164216625 RIOM_PWM_CMD_G4: 8 CabController
+ SG_ PWM_CMD_9 : 16|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_11 : 48|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_10 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_9 : 8|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_11 : 12|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_10 : 10|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+
+BO_ 2164216369 RIOM_PWM_CMD_G3: 8 CabController
+ SG_ PWM_CMD_8 : 48|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_7 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_6 : 16|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_8 : 12|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_7 : 10|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_6 : 8|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+
+BO_ 2164216113 RIOM_PWM_CMD_G2: 8 CabController
+ SG_ PWM_CMD_5 : 48|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_4 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_3 : 16|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_5 : 12|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_4 : 10|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_3 : 8|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+
+BO_ 2164215857 RIOM_PWM_CMD_G1: 8 CabController
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_2 : 12|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_1 : 10|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_MODE_0 : 8|2@1+ (1,0) [0|3] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_2 : 48|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_1 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ PWM_CMD_0 : 16|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+
+BO_ 2566840369 VD: 8 CabController
+ SG_ TotalVehicleDistance : 32|32@1+ (0.125,0) [0|526385151.9] "km"  DisplayHMI
+ SG_ TripDistance : 0|32@1+ (0.125,0) [0|526385151.9] "km"  DisplayHMI
+
+BO_ 2365522993 DEC1: 8 CabController
+ SG_ WE_AccelPedalPrc : 0|8@1+ (0.4,0) [0|100] "%"  Engine
+
+BO_ 2566847537 DD: 8 CabController
+ SG_ CargoAmbientTemperature : 32|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+ SG_ FuelLevel_2 : 48|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ EngineOilFilterDiffPressure : 24|8@1+ (0.5,0) [0|125] "kPa"  DisplayHMI
+ SG_ EngineFuelFilterDiffPressure : 16|8@1+ (2,0) [0|510] "kPa"  DisplayHMI
+ SG_ FuelLevel_1 : 8|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ WasherFluidLevel : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+
+BO_ 2566838784 SOFT_E: 8 Engine
+ SG_ SoftwareIdentification : 8|8@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ NumberSwIdentificationFields : 0|8@1+ (1,0) [0|250] ""  DisplayHMI
+
+BO_ 2566824960 ET2: 8 Engine
+ SG_ EngineOilTemperature2 : 0|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+ SG_ EngineECUTemperature : 16|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+
+BO_ 2566802993 DC1: 8 CabController
+ SG_ Status2OfDoors : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ Ramp_WheelChairLiftPosition : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ PositionOfDoors : 0|4@1+ (1,0) [0|15] ""  DisplayHMI
+
+BO_ 2365484270 TCO1: 8 CabController
+ SG_ TachographVehicleSpeed : 48|16@1+ (0.00390625,0) [0|250.996] "km/h"  Engine
+
+BO_ 2566834688 DM1_E: 8 Engine
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566841344 SHUTDN: 8 Engine
+ SG_ EngineWaitStartLamp : 24|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2364539894 EEC2_F6: 8 CabController
+ SG_ EstimatedPumpingPercentTorque : 56|8@1+ (1,-125) [-125|125] "%"  Engine
+ SG_ ActualMaxAvailableEngineTorque : 48|8@1+ (0.4,0) [0|100] "%"  Engine
+ SG_ SCRThermalManagementActive : 46|2@1+ (1,0) [0|3] ""  Engine
+ SG_ DPFThermalManagementActive : 44|2@1+ (1,0) [0|3] ""  Engine
+ SG_ MomentaryEngineMaxPowerFeedback : 42|2@1+ (1,0) [0|3] ""  Engine
+ SG_ VehicleAccelRateLimitStatus : 40|2@1+ (1,0) [0|3] ""  Engine
+ SG_ RemoteAcceleratorPedalPosition : 24|8@1+ (0.4,0) [0|100] "%"  Engine
+ SG_ EnginePercentLoadAtCurrentSpeed : 16|8@1+ (1,0) [0|250] "%"  Engine
+ SG_ RoadSpeedLimitStatus : 2|2@1+ (1,0) [0|3] ""  Engine
+ SG_ AcceleratorPedalPosition2 : 32|8@1+ (0.4,0) [0|100] "%"  Engine
+ SG_ AcceleratorPedalPosition1 : 8|8@1+ (0.4,0) [0|100] "%"  Engine
+ SG_ AcceleratorPedalKickdownSwitch : 4|2@1+ (1,0) [0|3] ""  Engine
+ SG_ AcceleratorPedal2LowIdleSwitch : 6|2@1+ (1,0) [0|3] ""  Engine
+ SG_ AcceleratorPedal1LowIdleSwitch : 0|2@1+ (1,0) [0|3] ""  Engine
+
+BO_ 2566848256 WFI: 8 Engine
+ SG_ Water_InFuel_Indicator : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2566846208 VEP1_E: 8 Engine
+ SG_ KeyswitchBatteryPotential : 48|16@1+ (0.05,0) [0|3212.75] "V"  DisplayHMI
+ SG_ BatteryPotential : 32|16@1+ (0.05,0) [0|3212.75] "V"  DisplayHMI
+
+BO_ 2566844928 LFE1: 8 Engine
+ SG_ EngineInstantaneousFuelEconomy : 16|16@1+ (0.001953125,0) [0|125.498046875] "km/L"  DisplayHMI
+ SG_ EngineFuelRate : 0|16@1+ (0.05,0) [0|3212.75] "L/h"  DisplayHMI
+
+BO_ 2566845952 IC1: 8 Engine
+ SG_ EngineIntakeManifold1Temperature : 16|8@1+ (1,-40) [-40|210] "deg C"  DisplayHMI,CabController
+ SG_ EngineIntakeManifold1Pressure : 8|8@1+ (2,0) [0|500] "kPa"  DisplayHMI,CabController
+ SG_ EngineExhaustGasTemperature : 40|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI,CabController
+ SG_ EngineAirIntakePressure : 24|8@1+ (2,0) [0|500] "kPa"  DisplayHMI,CabController
+ SG_ EngineAirFilter1DiffPressure : 32|8@1+ (0.05,0) [0|12.5] "kPa"  DisplayHMI,CabController
+
+BO_ 2566845696 AMB: 8 Engine
+ SG_ RoadSurfaceTemperature : 48|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+ SG_ EngineAirIntakeTemperature : 8|8@1+ (1,-40) [-40|210] "deg C"  DisplayHMI
+ SG_ AmbientAirTemperature : 32|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+ SG_ Cab_InteriorTemperature : 16|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+ SG_ BarometricPressure : 0|8@1+ (0.5,0) [0|125] "kPa"  DisplayHMI
+
+BO_ 2566840064 EEC3: 8 Engine
+ SG_ EngineParasiticLossPercentTorque : 32|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ EngineDesiredOpSpeedAsymyAdj : 24|8@1+ (1,0) [0|250] ""  CabController
+ SG_ EngineDesiredOperatingSpeed : 8|16@1+ (0.125,0) [0|8031.875] "rpm"  CabController
+ SG_ NominalFrictionPercentTorque : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2364539648 EEC2: 8 Engine
+ SG_ EstimatedPumpingPercentTorque : 56|8@1+ (1,-125) [-125|125] "%"  DisplayHMI
+ SG_ ActualMaxAvailableEngineTorque : 48|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ SCRThermalManagementActive : 46|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ DPFThermalManagementActive : 44|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MomentaryEngineMaxPowerFeedback : 42|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ VehicleAccelRateLimitStatus : 40|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RemoteAcceleratorPedalPosition : 24|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ EnginePercentLoadAtCurrentSpeed : 16|8@1+ (1,0) [0|250] "%"  DisplayHMI
+ SG_ RoadSpeedLimitStatus : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AcceleratorPedalPosition2 : 32|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ AcceleratorPedalPosition1 : 8|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ AcceleratorPedalKickdownSwitch : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AcceleratorPedal2LowIdleSwitch : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AcceleratorPedal1LowIdleSwitch : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566885681 WHSR: 8 CabController
+ SG_ CalibrationTime : 32|32@1+ (1,0) [0|4294967295] "s"  DisplayHMI
+ SG_ WheelStaticRadius : 0|16@1+ (0.001,0) [0|65.535] "m"  DisplayHMI
+ SG_ WheelRadiusCalibSts : 16|4@1+ (1,0) [0|15] ""  DisplayHMI
+
+BO_ 2566885425 CANG: 8 CabController
+ SG_ ChassisRotateAngle : 0|8@1+ (1,-125) [-125|125] "deg"  DisplayHMI
+ SG_ ChassisAngleSensVoltage : 8|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+
+BO_ 2564827136 CM1_E: 8 Engine
+ SG_ DieselPartFilterRegInhibitSw : 40|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ DieselPartFilterRegForceSw : 42|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RequestedPercentFanSpeed : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+
+BO_ 2566842624 LFC: 8 Engine
+ SG_ EngineTotalFuelUsed : 32|32@1+ (0.5,0) [0|2105540607.5] "L"  DisplayHMI
+ SG_ EngineTripFuel : 0|32@1+ (0.5,0) [0|2105540607.5] "L"  DisplayHMI
+
+BO_ 2566841600 HOURS: 8 Engine
+ SG_ EngineTotalRevolutions : 32|32@1+ (1,0) [0|4211081215000] "r"  DisplayHMI
+ SG_ EngineTotalHoursOperation : 0|32@1+ (0.05,0) [0|210554060.75] "hr"  DisplayHMI
+
+BO_ 2566842161 VH: 8 CabController
+ SG_ TotalPowerTakeoffHours : 32|32@1+ (0.05,0) [0|210554060.75] "hr"  DisplayHMI
+ SG_ TotalVehicleHours : 0|32@1+ (0.05,0) [0|210554060.75] "hr"  DisplayHMI
+
+BO_ 2566862120 ARM_G_L: 8 CabController
+ SG_ ArmButtonIndG2 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ArmButtonIndG1 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ArmButtonIndH2 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ArmButtonIndH1 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ARM_Brightness_G : 0|8@1+ (1,0) [0|100] "%"  ArmrestConsole
+
+BO_ 2566861352 ARM_C_L: 8 CabController
+ SG_ ARM_Brightness_C : 0|8@1+ (1,0) [0|100] "%"  ArmrestConsole
+
+BO_ 2566861096 ARM_AEH_L: 8 CabController
+ SG_ ArmButtonLum_H : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ArmButtonLum_E : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ArmButtonLum_A : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ARM_Brightness_AEH : 0|8@1+ (1,0) [0|100] "%"  ArmrestConsole
+
+BO_ 2566799400 KUO_LD: 8 CabController
+ SG_ KUO_FieldCmd_21 : 40|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_20 : 36|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_19 : 32|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_18 : 28|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_17 : 24|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_16 : 20|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_15 : 16|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_14 : 12|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_13 : 8|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_12 : 4|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_FieldCmd_11 : 0|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+
+BO_ 2566545960 KUO_LD_BTN: 8 CabController
+ SG_ KUO_BtnLightCmd_9 : 60|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_8 : 56|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_7 : 52|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_6 : 48|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_5 : 44|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_4 : 40|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_3 : 36|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_2 : 32|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_10 : 28|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+ SG_ KUO_BtnLightCmd_1 : 24|4@1+ (1,0) [0|15] ""  LightConsole_KUO
+
+BO_ 2563782440 KUO_L: 8 DisplayHMI
+ SG_ AMB_Brightness_Prc : 40|8@1+ (0.4,0) [0|100] "%"  LightConsole_KUO
+ SG_ KUO_FieldsBrightness_Prc : 8|8@1+ (6.7,0) [0|100.5] "%"  LightConsole_KUO
+ SG_ KUO_Brightness_Prc : 0|8@1+ (0.4,0) [0|100] "%"  LightConsole_KUO
+
+BO_ 2566803496 AMBIENT_L: 8 DisplayHMI
+ SG_ AMB_FaultCmd : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AMB_Command : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2365473079 LCMD_KUO: 8 LightConsole_KUO
+ SG_ KuoButtonSts_9 : 18|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_8 : 16|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_7 : 14|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_6 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_5 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_4 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_3 : 6|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_2 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_10 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ KuoButtonSts_1 : 2|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2566882344 CALIB_CMDS1: 8 DisplayHMI
+ SG_ AccelPedalCalibCmd : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ RearTphSensCalibCmd : 20|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FrontTphSensCalibCmd : 16|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ WSR_StartStopCmd : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ WSR_ResetDefaultValue : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ChassisAngleSensCalibCmd : 0|4@1+ (1,0) [0|15] ""  CabController
+
+BO_ 2566890792 WL_BTNCNFG: 8 DisplayHMI
+ SG_ WL_Config_Btn2 : 8|8@1+ (1,0) [0|255] ""  CabController
+ SG_ WL_Config_Btn1 : 0|8@1+ (1,0) [0|255] ""  CabController
+
+BO_ 2566890536 TIME: 8 DisplayHMI
+ SG_ SystemUnixTime : 0|32@1+ (1,0) [0|4294967295] "s"  CabController
+
+BO_ 2566890033 EQP_ACK: 8 CabController
+ SG_ EqpAckCode : 0|8@1+ (1,0) [0|0] ""  DisplayHMI
+
+BO_ 2566889768 EQP_SP: 8 DisplayHMI
+ SG_ EqpParamNewValue : 16|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ EqpParamIndex : 0|16@1+ (1,0) [0|65535] ""  CabController
+
+BO_ 2566889512 EQP: 8 DisplayHMI
+ SG_ EqpVehicleType : 0|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ EqpVehicleSeries : 16|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ EqpVehicleModel : 32|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ EqpParam : 48|16@1+ (1,0) [0|65535] ""  CabController
+
+BO_ 2566834737 DM1_BC: 8 CabController
+ SG_ OccurrenceCount : 41|7@1+ (1,0) [0|126] ""  DisplayHMI
+ SG_ SPNConversionMethod : 40|1@1+ (1,0) [0|1] ""  DisplayHMI
+ SG_ SPN_MSB : 37|3@1+ (1,0) [0|7] ""  DisplayHMI
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|0] ""  DisplayHMI
+ SG_ SPN_LSB : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashMalfunctionIndicatorLamp : 14|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2365449777 HBS: 8 CabController
+ SG_ HydraulicBrakePSupplyState2 : 22|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HydraulicBrakePSupplyState1 : 20|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HydraulicBrakeFluidLevelSwitch : 26|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HydraulicBrakeAudibleWarning : 24|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HydraulicBrakePWarning2 : 18|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HydraulicBrakePWarning1 : 16|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HydraulicBrakePressureCircuit2 : 8|8@1+ (100,0) [0|25000] "kPa"  DisplayHMI
+ SG_ HydraulicBrakePressureCircuit1 : 0|8@1+ (100,0) [0|25000] "kPa"  DisplayHMI
+
+BO_ 2566892081 OWAE: 8 CabController
+ SG_ WrongActionEvent4 : 48|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ WrongActionEvent3 : 32|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ WrongActionEvent2 : 16|16@1+ (1,0) [0|65535] ""  DisplayHMI
+ SG_ WrongActionEvent1 : 0|16@1+ (1,0) [0|65535] ""  DisplayHMI
+
+BO_ 2566882353 CANG_CSTS: 8 CabController
+ SG_ ChassisAngleSensCalibSts : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CalibrationTime : 32|32@1+ (1,0) [0|4294967295] "s" Vector__XXX
+ SG_ SavedRightVoltage : 16|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ SavedLeftVoltage : 8|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+ SG_ SavedCentreVoltage : 24|8@1+ (0.025,0) [0|6.25] "V"  DisplayHMI
+
+BO_ 2566881329 ONBSYS_INFO1: 8 CabController
+ SG_ TractorWorkMode : 24|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FrontTphPosition : 16|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ RearTphPosition : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ IgnitionStatus : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OperatorSeatSwitchStatus : 4|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566844721 CCVS1_BC: 8 CabController
+ SG_ ClutchSwitch : 32|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ BrakeSwitch : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ WheelBasedVehicleSpeed : 16|16@1+ (0.00390625,0) [0|250.996] "km/h"  DisplayHMI
+ SG_ ParkingBrakeSwitch : 0|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2566827569 AIR1: 8 CabController
+ SG_ PneumaticSupplyPressure : 0|8@1+ (8,0) [0|2000] "kPa"  DisplayHMI
+
+BO_ 2566809649 VF: 8 CabController
+ SG_ WinchOilPressureSwitch : 10|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ HydraulicTemperature : 0|8@1+ (1,-40) [-40|2150] "deg C"  DisplayHMI
+ SG_ HydraulicOilLevel : 16|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ HydraulicOilFilterRestrictionSw : 8|2@1+ (1,0) [0|3] ""  DisplayHMI
+
+BO_ 2565482545 RQST28_31: 8 CabController
+ SG_ RequestedPGN : 0|24@1+ (1,0) [0|16777215] ""  DisplayHMI
+
+BO_ 2365558833 STR_PRSS: 8 CabController
+ SG_ SteeringSystemPressure : 0|8@1+ (16,0) [0|4000] "kPa"  DisplayHMI
+
+BO_ 2566846257 VEP1: 8 CabController
+ SG_ KeyswitchBatteryPotential : 48|16@1+ (0.05,0) [0|3212.75] "V"  DisplayHMI
+ SG_ BatteryPotential : 32|16@1+ (0.05,0) [0|3212.75] "V"  DisplayHMI
+ SG_ ChargingSystemPotential : 16|16@1+ (0.05,0) [0|3212.75] "V"  DisplayHMI
+ SG_ AlternatorCurrent : 8|8@1+ (1,0) [0|250] "A"  DisplayHMI
+ SG_ NetBatteryCurrent : 0|8@1+ (1,-125) [-125|125] "A"  DisplayHMI
+
+BO_ 2566847025 Brakes: 8 CabController
+ SG_ ParkingBrakeRedWarningSignal : 26|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ParkingBrakeActuator : 24|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ ParkBrakeReleaseInhibitStatus : 28|2@1+ (1,0) [0|3] ""  DisplayHMI
+ SG_ BrakeSecondaryPressure : 16|8@1+ (4,0) [0|1000] "kPa"  DisplayHMI
+ SG_ BrakePrimaryPressure : 8|8@1+ (4,0) [0|1000] "kPa"  DisplayHMI
+ SG_ BrakeApplicationPressure : 0|8@1+ (4,0) [0|1000] "kPa"  DisplayHMI
+
+BO_ 2566844160 EFL_P1: 8 Engine
+ SG_ EngineOilPressure : 24|8@1+ (4,0) [0|1000] "kPa"  DisplayHMI
+ SG_ EngineOilLevel : 16|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ EngineFuelDeliveryPressure : 0|8@1+ (4,0) [0|1000] "kPa"  DisplayHMI
+ SG_ EngineExtCrankBlowPressure : 8|8@1+ (0.05,0) [0|12.5] "kPa"  DisplayHMI
+ SG_ EngineCrankcasePressure : 32|16@1+ (0.0078125,-250) [-250|251.99] "kPa"  DisplayHMI
+ SG_ EngineCoolantPressure : 48|8@1+ (2,0) [0|500] "kPa"  DisplayHMI
+ SG_ EngineCoolantLevel : 56|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+
+BO_ 2566843904 ET1: 8 Engine
+ SG_ EngineTurboOilTemperature : 32|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+ SG_ EngineOilTemperature_1 : 16|16@1+ (0.03125,-273) [-273|1734.96875] "deg C"  DisplayHMI
+ SG_ EngineIntercoolerThermostatOpn : 56|8@1+ (0.4,0) [0|100] "%"  DisplayHMI
+ SG_ EngineIntercoolerTemperature : 48|8@1+ (1,-40) [-40|210] "deg C"  DisplayHMI
+ SG_ EngineFuelTemperature_1 : 8|8@1+ (1,-40) [-40|210] "deg C"  DisplayHMI
+ SG_ EngineCoolantTemperature : 0|8@1+ (1,-40) [-40|210] "deg C"  DisplayHMI
+
+BO_ 2364539904 EEC1: 8 Engine
+ SG_ DemandEnginePercentTorque : 56|8@1+ (1,-125) [-125|125] "%"  DisplayHMI,CabController
+ SG_ EngineTorqueMode : 0|4@1+ (1,0) [0|15] ""  DisplayHMI,CabController
+ SG_ EngineTorqueHighResolution : 4|4@1+ (0.125,0) [0|0.875] ""  DisplayHMI,CabController
+ SG_ EngineStarterMode : 48|4@1+ (1,0) [0|15] ""  DisplayHMI,CabController
+ SG_ EngineDemandPercentTorque : 8|8@1+ (1,-125) [-125|125] "%"  DisplayHMI,CabController
+ SG_ EngineControl_SA : 40|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ EngineActualPercentTorque : 16|8@1+ (1,-125) [-125|125] "%"  DisplayHMI,CabController
+ SG_ EngineSpeed : 24|16@1+ (0.125,0) [0|8031.875] "rpm"  DisplayHMI,CabController
+
+BO_ 2566796834 AVC_Valve6: 8 CabController
+ SG_ AVC_ValveState : 16|4@1+ (1,0) [0|15] ""  DisplayHMI,BackEH_S6_Hande
+ SG_ AVC_ValvePortFlowCmd : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI,BackEH_S6_Hande
+ SG_ AVC_ValveFailsafeModeCmd : 22|2@1+ (1,0) [0|3] ""  DisplayHMI,BackEH_S6_Hande
+
+BO_ 2566796578 AVC_Valve5: 8 CabController
+ SG_ AVC_ValveState : 16|4@1+ (1,0) [0|15] ""  DisplayHMI,BackEH_S5_Hande
+ SG_ AVC_ValvePortFlowCmd : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI,BackEH_S5_Hande
+ SG_ AVC_ValveFailsafeModeCmd : 22|2@1+ (1,0) [0|3] ""  DisplayHMI,BackEH_S5_Hande
+
+BO_ 2566796322 AVC_Valve4: 8 CabController
+ SG_ AVC_ValveState : 16|4@1+ (1,0) [0|15] ""  DisplayHMI,BackEH_S4_Hande
+ SG_ AVC_ValvePortFlowCmd : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI,BackEH_S4_Hande
+ SG_ AVC_ValveFailsafeModeCmd : 22|2@1+ (1,0) [0|3] ""  DisplayHMI,BackEH_S4_Hande
+
+BO_ 2566796066 AVC_Valve3: 8 CabController
+ SG_ AVC_ValveState : 16|4@1+ (1,0) [0|15] ""  DisplayHMI,BackEH_S3_Hande
+ SG_ AVC_ValvePortFlowCmd : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI,BackEH_S3_Hande
+ SG_ AVC_ValveFailsafeModeCmd : 22|2@1+ (1,0) [0|3] ""  DisplayHMI,BackEH_S3_Hande
+
+BO_ 2566795810 AVC_Valve2: 8 CabController
+ SG_ AVC_ValveState : 16|4@1+ (1,0) [0|15] ""  DisplayHMI,BackEH_S2_Hande
+ SG_ AVC_ValvePortFlowCmd : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI,BackEH_S2_Hande
+ SG_ AVC_ValveFailsafeModeCmd : 22|2@1+ (1,0) [0|3] ""  DisplayHMI,BackEH_S2_Hande
+
+BO_ 2566795554 AVC_Valve1: 8 CabController
+ SG_ AVC_ValveState : 16|4@1+ (1,0) [0|15] ""  DisplayHMI,BackEH_S1_Hande
+ SG_ AVC_ValvePortFlowCmd : 0|8@1+ (0.4,0) [0|100] "%"  DisplayHMI,BackEH_S1_Hande
+ SG_ AVC_ValveFailsafeModeCmd : 22|2@1+ (1,0) [0|3] ""  DisplayHMI,BackEH_S1_Hande
+
+BO_ 2566788742 AVE_Valve6: 8 BackEH_S6_Hande
+ SG_ AVE_ValveState : 16|4@1+ (1,0) [0|15] ""  CabController
+ SG_ AVE_ValveFailsafeMode : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ AVE_RetractEstimatedFlow : 8|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ AVE_ExtendEstimatedFlow : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2566788485 AVE_Valve5: 8 BackEH_S5_Hande
+ SG_ AVE_ValveState : 16|4@1+ (1,0) [0|15] ""  CabController
+ SG_ AVE_ValveFailsafeMode : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ AVE_RetractEstimatedFlow : 8|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ AVE_ExtendEstimatedFlow : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2566788228 AVE_Valve4: 8 BackEH_S4_Hande
+ SG_ AVE_ValveState : 16|4@1+ (1,0) [0|15] ""  CabController
+ SG_ AVE_ValveFailsafeMode : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ AVE_RetractEstimatedFlow : 8|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ AVE_ExtendEstimatedFlow : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2566787971 AVE_Valve3: 8 BackEH_S3_Hande
+ SG_ AVE_ValveState : 16|4@1+ (1,0) [0|15] ""  CabController
+ SG_ AVE_ValveFailsafeMode : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ AVE_RetractEstimatedFlow : 8|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ AVE_ExtendEstimatedFlow : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2566787714 AVE_Valve2: 8 BackEH_S2_Hande
+ SG_ AVE_ValveState : 16|4@1+ (1,0) [0|15] ""  CabController
+ SG_ AVE_ValveFailsafeMode : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ AVE_RetractEstimatedFlow : 8|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ AVE_ExtendEstimatedFlow : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2566787457 AVE_Valve1: 8 BackEH_S1_Hande
+ SG_ AVE_ValveState : 16|4@1+ (1,0) [0|15] ""  CabController
+ SG_ AVE_ValveFailsafeMode : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ AVE_RetractEstimatedFlow : 8|8@1+ (1,-125) [-125|125] "%"  CabController
+ SG_ AVE_ExtendEstimatedFlow : 0|8@1+ (1,-125) [-125|125] "%"  CabController
+
+BO_ 2365446221 Radar_TSS: 2 Radar_DIS01
+ SG_ Radar_Speed : 7|16@0+ (0.01,0) [0|655.35] "km/h"  CabController,DisplayHMI
+
+BO_ 2164224228 RIOM_ADR_E4: 8 BU702_E4
+ SG_ RiomVersionPatch : 8|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomVersionMinor : 16|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomVersionMajor : 24|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomPinCode : 0|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+
+BO_ 2164224227 RIOM_ADR_E3: 8 BU702_E3
+ SG_ RiomVersionPatch : 8|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomVersionMinor : 16|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomVersionMajor : 24|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomPinCode : 0|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+
+BO_ 2164224254 RIOM_ADR_UNDEF: 8 BU702_E3
+ SG_ RiomVersionPatch : 8|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomVersionMinor : 16|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomVersionMajor : 24|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+ SG_ RiomPinCode : 0|8@1+ (1,0) [0|255] ""  DisplayHMI,CabController
+
+BO_ 2164225064 RIOM_IO_CONFIG_28: 8 DisplayHMI
+ SG_ RiomUirModeConfig m3 : 48|16@1+ (1,0) [0|0] ""  BU702_E4,BU702_E3
+ SG_ RiomPwmModeConfig m5 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ RiomPwmFreqConfig m5 : 48|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ RiomPwmDiagConfig m5 : 24|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomNiModeConfig m4 : 32|16@1+ (1,0) [0|0] ""  BU702_E4,BU702_E3
+ SG_ RiomDiLLConfig m1 : 48|16@1+ (1,0) [0|65535] "mV"  BU702_E4,BU702_E3
+ SG_ RiomDiHLConfig m1 : 32|16@1+ (1,0) [0|65535] "mV"  BU702_E4,BU702_E3
+ SG_ RiomDI_PullUpConfig m1 : 24|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalNumber : 16|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalType M : 8|4@1+ (1,0) [0|15] ""  BU702_E4,BU702_E3
+
+BO_ 2164225073 RIOM_IO_CONFIG_31: 8 CabController
+ SG_ RiomUirModeConfig m3 : 48|16@1+ (1,0) [0|0] ""  BU702_E4,BU702_E3
+ SG_ RiomPwmModeConfig m5 : 32|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ RiomPwmFreqConfig m5 : 48|16@1+ (1,0) [0|65535] ""  BU702_E4,BU702_E3
+ SG_ RiomPwmDiagConfig m5 : 24|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomNiModeConfig m4 : 32|16@1+ (1,0) [0|0] ""  BU702_E4,BU702_E3
+ SG_ RiomDiLLConfig m1 : 48|16@1+ (1,0) [0|65535] "mV"  BU702_E4,BU702_E3
+ SG_ RiomDiHLConfig m1 : 32|16@1+ (1,0) [0|65535] "mV"  BU702_E4,BU702_E3
+ SG_ RiomDI_PullUpConfig m1 : 24|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalNumber : 16|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalType M : 8|4@1+ (1,0) [0|15] ""  BU702_E4,BU702_E3
+
+BO_ 2164224552 RIOM_SA_CONFIG_28: 8 DisplayHMI
+ SG_ RiomVirtualAdress : 8|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomPinCode : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+
+BO_ 2164224561 RIOM_SA_CONFIG_31: 8 CabController
+ SG_ RiomVirtualAdress : 8|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomPinCode : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+
+BO_ 2164224808 RIOM_TIME_CONFIG_28: 8 DisplayHMI
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalType : 8|4@1+ (1,0) [0|15] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalTiming : 12|4@1+ (1,0) [0|0] ""  BU702_E4,BU702_E3
+
+BO_ 2164224817 RIOM_TIME_CONFIG_31: 8 CabController
+ SG_ RiomVirtualAdress : 0|8@1+ (1,0) [0|255] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalType : 8|4@1+ (1,0) [0|15] ""  BU702_E4,BU702_E3
+ SG_ RiomSignalTiming : 12|4@1+ (1,0) [0|0] ""  BU702_E4,BU702_E3
+
+BO_ 2164221412 RIOM_PWM_FB_G6_E4: 8 BU702_E4
+ SG_ PWM_STS_16 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_15 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_16 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_15 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164221156 RIOM_PWM_FB_G5_E4: 8 BU702_E4
+ SG_ PWM_STS_14 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_13 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_12 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_14 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_13 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_12 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220900 RIOM_PWM_FB_G4_E4: 8 BU702_E4
+ SG_ PWM_STS_9 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_11 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_10 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_9 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_11 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_10 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220644 RIOM_PWM_FB_G3_E4: 8 BU702_E4
+ SG_ PWM_STS_8 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_7 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_6 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_8 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_7 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_6 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220388 RIOM_PWM_FB_G2_E4: 8 BU702_E4
+ SG_ PWM_STS_5 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_4 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_3 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_5 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_4 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_3 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220132 RIOM_PWM_FB_G1_E4: 8 BU702_E4
+ SG_ PWM_STS_2 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_1 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_2 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_1 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_0 : 16|16@1+ (0.001,0) [0|65535] "A"  CabController
+
+BO_ 2164221411 RIOM_PWM_FB_G6_E3: 8 BU702_E3
+ SG_ PWM_STS_16 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_15 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_16 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_15 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164221155 RIOM_PWM_FB_G5_E3: 8 BU702_E3
+ SG_ PWM_STS_14 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_13 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_12 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_14 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_13 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_12 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220899 RIOM_PWM_FB_G4_E3: 8 BU702_E3
+ SG_ PWM_STS_9 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_11 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_10 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_9 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_11 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_10 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220643 RIOM_PWM_FB_G3_E3: 8 BU702_E3
+ SG_ PWM_STS_8 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_7 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_6 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_8 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_7 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_6 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220387 RIOM_PWM_FB_G2_E3: 8 BU702_E3
+ SG_ PWM_STS_5 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_4 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_3 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_5 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_4 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_3 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164220131 RIOM_PWM_FB_G1_E3: 8 BU702_E3
+ SG_ PWM_STS_2 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_1 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ PWM_FB_2 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_1 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ PWM_FB_0 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+
+BO_ 2164212196 RIOM_NI_G2_E4: 8 BU702_E4
+ SG_ NI_F_MSB_4 : 8|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_MSB_3 : 2|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_4 : 32|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_3 : 16|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_STS_4 : 5|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_STS_3 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164212195 RIOM_NI_G2_E3: 8 BU702_E3
+ SG_ NI_F_MSB_4 : 8|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_MSB_3 : 2|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_4 : 32|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_3 : 16|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_STS_4 : 5|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_STS_3 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164211940 RIOM_NI_G1_E4: 8 BU702_E4
+ SG_ NI_STS_2 : 11|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_STS_1 : 5|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_F_2 : 48|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_1 : 32|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_0 : 16|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_MSB_2 : 13|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_MSB_1 : 8|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_MSB_0 : 2|3@1+ (1,0) [0|7] ""  CabController
+
+BO_ 2164211939 RIOM_NI_G1_E3: 8 BU702_E3
+ SG_ NI_STS_2 : 11|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_STS_1 : 5|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ NI_F_2 : 48|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_1 : 32|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_0 : 16|16@1+ (1,0) [0|65535] ""  CabController
+ SG_ NI_F_MSB_2 : 13|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_MSB_1 : 8|3@1+ (1,0) [0|7] ""  CabController
+ SG_ NI_F_MSB_0 : 2|3@1+ (1,0) [0|7] ""  CabController
+
+BO_ 2164208612 RIOM_UIR_G4_E4: 8 BU702_E4
+ SG_ UIR_R_11 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_10 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_9 m3 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_11 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_10 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_9 m2 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_V_11 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_10 : 32|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_9 m1 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_MODE_11 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_10 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_9 M : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_9 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_11 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_10 : 2|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164208356 RIOM_UIR_G3_E4: 8 BU702_E4
+ SG_ UIR_R_8 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_7 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_6 m3 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_8 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_7 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_6 m2 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_V_8 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_7 : 32|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_6 m1 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_MODE_8 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_7 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_6 M : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_8 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_7 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_6 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164208611 RIOM_UIR_G4_E3: 8 BU702_E3
+ SG_ UIR_R_11 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_10 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_9 m3 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_11 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_10 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_9 m2 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_V_11 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_10 : 32|16@1+ (0.001,0) [0|65535] "V"  CabController
+ SG_ UIR_V_9 m1 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_MODE_11 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_10 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_9 M : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_9 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_11 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_10 : 2|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164208355 RIOM_UIR_G3_E3: 8 BU702_E3
+ SG_ UIR_R_8 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_7 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_6 m3 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_8 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_7 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_6 m2 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_V_8 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_7 : 32|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_6 m1 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_MODE_8 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_7 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_6 M : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_8 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_7 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_6 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164208100 RIOM_UIR_G2_E4: 8 BU702_E4
+ SG_ UIR_V_5 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_4 : 32|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_3 m1 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_A_5 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_4 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_3 m2 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_R_5 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_4 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_3 m3 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_STS_5 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_4 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_3 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_5 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_4 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_3 M : 8|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164208099 RIOM_UIR_G2_E3: 8 BU702_E3
+ SG_ UIR_V_5 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_4 : 32|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_3 m1 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_A_5 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_4 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_3 m2 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_R_5 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_4 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_3 m3 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_STS_5 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_4 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_3 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_5 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_4 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_3 M : 8|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164207844 RIOM_UIR_G1_E4: 8 BU702_E4
+ SG_ UIR_V_2 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_0 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_R_2 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_0 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_2 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_0 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_V_1 m1 : 32|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_R_1 m3 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_1 m2 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_MODE_2 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_1 M : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_0 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_2 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_1 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164207843 RIOM_UIR_G1_E3: 8 BU702_E3
+ SG_ UIR_V_2 : 48|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_V_0 : 16|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_R_2 : 48|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_R_0 : 16|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_2 : 48|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_A_0 : 16|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_V_1 m1 : 32|16@1+ (0.001,0) [0|65.535] "V"  CabController
+ SG_ UIR_R_1 m3 : 32|16@1+ (0.25,0) [0|16383.75] "Ohm"  CabController
+ SG_ UIR_A_1 m2 : 32|16@1+ (0.001,0) [0|65.535] "A"  CabController
+ SG_ UIR_MODE_2 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_1 M : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_MODE_0 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_2 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_1 : 2|2@1+ (1,0) [0|3] ""  CabController
+ SG_ UIR_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164199652 RIOM_DI_E4: 8 BU702_E4
+ SG_ DI_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_18 : 36|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_17 : 34|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_16 : 32|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_15 : 30|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_14 : 28|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_13 : 26|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_12 : 24|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_11 : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_10 : 20|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_9 : 18|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_8 : 16|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_7 : 14|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_6 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_5 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_4 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_3 : 6|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_2 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_1 : 2|2@1+ (1,0) [0|3] ""  CabController
+
+BO_ 2164199651 RIOM_DI_E3: 8 BU702_E3
+ SG_ DI_STS_0 : 0|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_18 : 36|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_17 : 34|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_16 : 32|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_15 : 30|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_14 : 28|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_13 : 26|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_12 : 24|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_11 : 22|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_10 : 20|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_9 : 18|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_8 : 16|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_7 : 14|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_6 : 12|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_5 : 10|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_4 : 8|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_3 : 6|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_2 : 4|2@1+ (1,0) [0|3] ""  CabController
+ SG_ DI_STS_1 : 2|2@1+ (1,0) [0|3] ""  CabController
+
+BO_TX_BU_ 2164224254 : BU702_E4,BU702_E3;
+
+
+CM_ BU_ KeylessController "Контроллер бесключевого доступа";
+CM_ BU_ ArmrestConsole "Многофункциональный подлокотник";
+CM_ BU_ LightConsole_KUO "Консоль управления освещением КУО";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 AcPedalMode "Режим работы педали газа";
+CM_ SG_ 3221225472 RearTphSnsCalibSts "Статус калибровки датчика угла поворота рамы: 0x0 - Не калиброван; 0x1 - Откалиброван; 0x2 - Успешн; 0xE - Ошибка; ";
+CM_ BO_ 2565805105 "Управление Suspension System";
+CM_ BO_ 2566799409 "Lighting Data";
+CM_ SG_ 2566799409 WorkLights "Статус рабочего освещения";
+CM_ SG_ 2566799409 TractorClearanceLight "Статус габаритных огней";
+CM_ SG_ 2566799409 LeftTurnSignalLights "Статус левых сигналов поворота";
+CM_ SG_ 2566799409 RightTurnSignalLights "Статус правых сигналов поворота";
+CM_ SG_ 2566799409 RotatingBeaconLight "Статус проблескового маяка";
+CM_ SG_ 2566799409 HighBeamHeadLight "Статус дальнего света";
+CM_ SG_ 2566799409 LowBeamHeadLight "Статус ближнего света";
+CM_ SG_ 2566858280 DispWorkToolWidth "Ширина захвата орудия";
+CM_ SG_ 2566858280 DispSlipConfig "Установка коэфициента проскальзывания";
+CM_ SG_ 2566858280 DispAccelPedalMode "Режим работы напольной педали";
+CM_ BO_ 2566881585 "Наличие оператора";
+CM_ BO_ 2566856744 "Статусы управления разворотной полосой";
+CM_ BO_ 2566883121 "Данные калибровки датчика положения напольной педали акселератора";
+CM_ SG_ 2566883121 AcPedalUpSavedVoltage "Сохраненное напряжение верхнего положения датчика ЗНУ";
+CM_ SG_ 2566883121 AcPedalSnsCalibSts "Статус калибровки датчика угла поворота рамы: 0x0 - Не калиброван, 0x1 - Откалиброван, 0x2 - Успешн, 0xE - Ошибка ";
+CM_ SG_ 2566883121 AcPedalSensVoltage "Текущее напряжение датчика положения  ЗНУ";
+CM_ SG_ 2566883121 AcPedalDownSavedVoltage "Сохраненное напряжение нижнего положения датчика ЗНУ";
+CM_ SG_ 2566883121 CalibrationTime "Время сохранения калибровки в формате Unix";
+CM_ BO_ 2566858024 "Конфигурации секции ЭГР";
+CM_ SG_ 2566858024 PtoRearMinSpeed "Минимальные обороты заднего ВОМ";
+CM_ SG_ 2566858024 PtoRearMaxSpeed "Максимальные обороты заднего ВОМ";
+CM_ SG_ 2566858024 PtoFrontMinSpeed "Минимальные обороты переднего ВОМ";
+CM_ SG_ 2566858024 PtoFrontMaxSpeed "Максимальные обороты переднего ВОМ";
+CM_ BO_ 2566882865 "Данные калибровки датчика положения ПНУ";
+CM_ SG_ 2566882865 FrontTphSnsCalibSts "Статус калибровки датчика положения ПНУ: 0x0 - Не калиброван; 0x1 - Откалиброван; 0x2 - Успешн; 0xE - Ошибка; ";
+CM_ SG_ 2566882865 FrontTphUpSavedVoltage "Сохраненное напряжение верхнего положения датчика ПНУ";
+CM_ SG_ 2566882865 FrontTphSensVoltage "Текущее напряжение датчика положения ПНУ";
+CM_ SG_ 2566882865 FrontTphDownSavedVoltage "Сохраненное напряжение нижнего положения датчика ПНУ";
+CM_ SG_ 2566882865 CalibrationTime "Время сохранения калибровки в формате Unix";
+CM_ BO_ 2566882609 "Данные калибровки датчика положения ЗНУ";
+CM_ SG_ 2566882609 RearTphSnsCalibSts "Статус калибровки датчика положения ЗНУ: 0x0 - Не калиброван; 0x1 - Откалиброван; 0x2 - Успешн; 0xE - Ошибка; ";
+CM_ SG_ 2566882609 RearTphUpSavedVoltage "Сохраненное напряжение верхнего положения датчика ЗНУ";
+CM_ SG_ 2566882609 RearTphSensVoltage "Текущее напряжение датчика положения  ЗНУ";
+CM_ SG_ 2566882609 RearTphDownSavedVoltage "Сохраненное напряжение нижнего положения датчика ЗНУ";
+CM_ SG_ 2566882609 CalibrationTime "Время сохранения калибровки в формате Unix";
+CM_ BO_ 2565472289 "Запрос PGN у 0x00 с 0x21";
+CM_ BO_ 2565472305 "Запрос PGN у 0x00 с 0x31";
+CM_ BO_ 2566841088 "Engine Configuration 1";
+CM_ BO_ 2565537576 "Запрос PGN у All с 0x31";
+CM_ BO_ 2565472296 "Запрос PGN у 0x00 с 0x28";
+CM_ BO_ 2566834822 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834822 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834822 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834822 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834822 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834822 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834822 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834822 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834822 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834822 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834821 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834821 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834821 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834821 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834821 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834821 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834821 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834821 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834821 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834821 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834820 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834820 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834820 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834820 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834820 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834820 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834820 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834820 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834820 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834820 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834819 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834819 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834819 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834819 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834819 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834819 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834819 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834819 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834819 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834819 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834818 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834818 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834818 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834818 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834818 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834818 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834818 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834818 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834818 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834818 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834817 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834817 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834817 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834817 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834817 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834817 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834817 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834817 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834817 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834817 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834816 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834816 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834816 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834816 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834816 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834816 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834816 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834816 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834816 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834816 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834691 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834691 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834691 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834691 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834691 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834691 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834691 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834691 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834691 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834691 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834743 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834743 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834743 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834743 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834743 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834743 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834743 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834743 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834743 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834743 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834913 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834913 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834913 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834913 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834913 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834913 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834913 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834913 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834913 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834913 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566834740 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834740 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834740 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834740 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834740 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834740 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834740 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834740 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834740 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834740 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2566852660 "Состояния контроллера бесключевого запуска";
+CM_ SG_ 2566852660 KeylessControllerStatus "Состояние контроллера бесключевого запуска";
+CM_ BO_ 2566860840 "Сообщение ярости для подлокотника";
+CM_ SG_ 2566860840 ARM_Brightness_G "Яркость подсветки полей G";
+CM_ SG_ 2566860840 ARM_Brightness_C "Яркость подсветки кнопок С";
+CM_ SG_ 2566860840 ARM_Brightness_AEH "Яркость подсветки кнопок А,Е,Н";
+CM_ BO_ 2566861864 "Индикация кнопок МФП C";
+CM_ SG_ 2566861864 ArmButtonIndC32 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC31 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC30 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC29 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC28 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC27 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC26 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC25 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC24 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC23 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861864 ArmButtonIndC22 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ BO_ 2566861608 "Индикация кнопок МФП C";
+CM_ SG_ 2566861608 ArmButtonIndC21 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC20 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC19 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC18 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC17 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC16 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC15 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC14 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC13 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC12 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC11 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC10 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC9 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC8 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC7 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC6 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC5 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC4 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC3 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC2 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ SG_ 2566861608 ArmButtonIndC1 "Индикация кнопки МФП: 0-выкл; 1-синий; 2-зеленый; 4-красный; 7-белый ";
+CM_ BO_ 2566850529 "МФП Дополнительные кнопки";
+CM_ SG_ 2566850529 ArmButton_E5 "Кнопка МФП";
+CM_ SG_ 2566850529 ArmButton_E4 "Кнопка МФП";
+CM_ SG_ 2566850529 ArmButton_E3 "Кнопка МФП";
+CM_ SG_ 2566850529 ArmButton_E2 "Кнопка МФП";
+CM_ SG_ 2566850529 ArmButton_E1 "Кнопка МФП";
+CM_ BO_ 2566849761 "МФП Энкодеры";
+CM_ BO_ 2566849505 "МФП Кнопки поле C";
+CM_ BO_ 2365526753 "МФП Джойстик выбора направления";
+CM_ SG_ 2365526753 ArmJoystickPos_A15 "МФП Отклонение основного джойстика";
+CM_ BO_ 2365526497 "МФП Поле A";
+CM_ SG_ 2365526497 ArmRegPosA12 "МФП Отклонение регулятора 2
+";
+CM_ SG_ 2365526497 ArmRegPosA11 "МФП Отклонение регулятора 1";
+CM_ BO_ 2365523681 "МФП ЗНУ ПНУ Глубина";
+CM_ SG_ 2365523681 ArmRearPtoOn "МФП Задний ВОМ включение";
+CM_ SG_ 2365523681 ArmRearPtoOff "МФП Задний ВОМ выключение";
+CM_ SG_ 2365523681 ArmFrontPtoOn "МФП Передний ВОМ включение";
+CM_ SG_ 2365523681 ArmFrontPtoOff "МФП Передний ВОМ выключение";
+CM_ SG_ 2365523681 ArmDepthReg "МФП Регулятор глубины";
+CM_ BO_ 2365523425 "МФП Дополнительный джойстик";
+CM_ BO_ 2365522657 "МФП Кулисы 2";
+CM_ SG_ 2365522657 ArmKeyPos_D6_4 "МФП Кулисная клавиша положение плавающее";
+CM_ SG_ 2365522657 ArmKeyPos_D6_3 "МФП Кулисная клавиша положение втягивание";
+CM_ SG_ 2365522657 ArmKeyPos_D6_2 "МФП Кулисная клавиша положение нейтраль";
+CM_ SG_ 2365522657 ArmKeyPos_D6_1 "МФП Кулисная клавиша положение выдвижение";
+CM_ SG_ 2365522657 ArmKeyPos_D6 "МПФ Кулисная клавиша положение отклонения";
+CM_ SG_ 2365522657 ArmKeyPos_D5_4 "МФП Кулисная клавиша положение плавающее";
+CM_ SG_ 2365522657 ArmKeyPos_D5_3 "МФП Кулисная клавиша положение втягивание";
+CM_ SG_ 2365522657 ArmKeyPos_D5_2 "МФП Кулисная клавиша положение нейтраль";
+CM_ SG_ 2365522657 ArmKeyPos_D5_1 "МФП Кулисная клавиша положение выдвижение";
+CM_ SG_ 2365522657 ArmKeyPos_D5 "МПФ Кулисная клавиша положение отклонения";
+CM_ SG_ 2365522657 ArmKeyPos_D4_4 "МФП Кулисная клавиша положение плавающее";
+CM_ SG_ 2365522657 ArmKeyPos_D4_3 "МФП Кулисная клавиша положение втягивание";
+CM_ SG_ 2365522657 ArmKeyPos_D4_2 "МФП Кулисная клавиша положение нейтраль";
+CM_ SG_ 2365522657 ArmKeyPos_D4_1 "МФП Кулисная клавиша положение выдвижение";
+CM_ SG_ 2365522657 ArmKeyPos_D4 "МПФ Кулисная клавиша положение отклонения";
+CM_ BO_ 2365522401 "МФП Дроссель и Кулисы";
+CM_ SG_ 2365522401 ArmKeyPos_D3_4 "МФП Кулисная клавиша положение плавающее";
+CM_ SG_ 2365522401 ArmKeyPos_D3_3 "МФП Кулисная клавиша положение втягивание";
+CM_ SG_ 2365522401 ArmKeyPos_D3_2 "МФП Кулисная клавиша положение нейтраль";
+CM_ SG_ 2365522401 ArmKeyPos_D3_1 "МФП Кулисная клавиша положение выдвижение";
+CM_ SG_ 2365522401 ArmKeyPos_D3 "МПФ Кулисная клавиша положение отклонения";
+CM_ SG_ 2365522401 ArmKeyPos_D2_4 "МФП Кулисная клавиша положение плавающее";
+CM_ SG_ 2365522401 ArmKeyPos_D2_3 "МФП Кулисная клавиша положение втягивание";
+CM_ SG_ 2365522401 ArmKeyPos_D2_2 "МФП Кулисная клавиша положение нейтраль";
+CM_ SG_ 2365522401 ArmKeyPos_D2_1 "МФП Кулисная клавиша положение выдвижение";
+CM_ SG_ 2365522401 ArmKeyPos_D2 "МПФ Кулисная клавиша положение отклонения";
+CM_ SG_ 2365522401 ArmKeyPos_D1_4 "МФП Кулисная клавиша положение плавающее";
+CM_ SG_ 2365522401 ArmKeyPos_D1_3 "МФП Кулисная клавиша положение втягивание";
+CM_ SG_ 2365522401 ArmKeyPos_D1_2 "МФП Кулисная клавиша положение нейтраль";
+CM_ SG_ 2365522401 ArmKeyPos_D1_1 "МФП Кулисная клавиша положение выдвижение";
+CM_ SG_ 2365522401 ArmKeyPos_D1 "МПФ Кулисная клавиша положение отклонения";
+CM_ SG_ 2365522401 ArmManualThrottlePos "МФП Отклонение регулятора ручного дросселя";
+CM_ BO_ 2566853928 "Конфигурации секции ЭГР";
+CM_ SG_ 2566853928 EhSectionWorkTime "Время работы секции ЭГР";
+CM_ SG_ 2566853928 EhSectionRectractFlow "Расход втягивания секции ЭГР";
+CM_ SG_ 2566853928 EhSectionMode "Режим работы секции ЭГР";
+CM_ SG_ 2566853928 EhSectionExtendFlow "Расход выдвижения секции ЭГР";
+CM_ SG_ 2566853928 EhSectionCurveType "Режим работы секции ЭГР";
+CM_ SG_ 2566853928 EhSectionBoostRectractFlow "Ускоренный расход втягивания секции ЭГР";
+CM_ SG_ 2566853928 EhSectionBoostExtendFlow "Ускоренный расход выдвижения секции ЭГР";
+CM_ BO_ 2566853672 "Конфигурации секции ЭГР";
+CM_ SG_ 2566853672 EhSectionWorkTime "Время работы секции ЭГР";
+CM_ SG_ 2566853672 EhSectionRectractFlow "Расход втягивания секции ЭГР";
+CM_ SG_ 2566853672 EhSectionMode "Режим работы секции ЭГР";
+CM_ SG_ 2566853672 EhSectionExtendFlow "Расход выдвижения секции ЭГР";
+CM_ SG_ 2566853672 EhSectionCurveType "Режим работы секции ЭГР";
+CM_ SG_ 2566853672 EhSectionBoostRectractFlow "Ускоренный расход втягивания секции ЭГР";
+CM_ SG_ 2566853672 EhSectionBoostExtendFlow "Ускоренный расход выдвижения секции ЭГР";
+CM_ BO_ 2566854184 "Конфигурации секции ЭГР";
+CM_ SG_ 2566854184 EhSectionWorkTime "Время работы секции ЭГР";
+CM_ SG_ 2566854184 EhSectionRectractFlow "Расход втягивания секции ЭГР";
+CM_ SG_ 2566854184 EhSectionMode "Режим работы секции ЭГР";
+CM_ SG_ 2566854184 EhSectionExtendFlow "Расход выдвижения секции ЭГР";
+CM_ SG_ 2566854184 EhSectionCurveType "Режим работы секции ЭГР";
+CM_ SG_ 2566854184 EhSectionBoostRectractFlow "Ускоренный расход втягивания секции ЭГР";
+CM_ SG_ 2566854184 EhSectionBoostExtendFlow "Ускоренный расход выдвижения секции ЭГР";
+CM_ BO_ 2566853416 "Конфигурации секции ЭГР";
+CM_ SG_ 2566853416 EhSectionWorkTime "Время работы секции ЭГР";
+CM_ SG_ 2566853416 EhSectionRectractFlow "Расход втягивания секции ЭГР";
+CM_ SG_ 2566853416 EhSectionMode "Режим работы секции ЭГР";
+CM_ SG_ 2566853416 EhSectionExtendFlow "Расход выдвижения секции ЭГР";
+CM_ SG_ 2566853416 EhSectionCurveType "Режим работы секции ЭГР";
+CM_ SG_ 2566853416 EhSectionBoostRectractFlow "Ускоренный расход втягивания секции ЭГР";
+CM_ SG_ 2566853416 EhSectionBoostExtendFlow "Ускоренный расход выдвижения секции ЭГР";
+CM_ BO_ 2566853160 "Конфигурации секции ЭГР";
+CM_ SG_ 2566853160 EhSectionWorkTime "Время работы секции ЭГР";
+CM_ SG_ 2566853160 EhSectionRectractFlow "Расход втягивания секции ЭГР";
+CM_ SG_ 2566853160 EhSectionMode "Режим работы секции ЭГР";
+CM_ SG_ 2566853160 EhSectionExtendFlow "Расход выдвижения секции ЭГР";
+CM_ SG_ 2566853160 EhSectionCurveType "Режим работы секции ЭГР";
+CM_ SG_ 2566853160 EhSectionBoostRectractFlow "Ускоренный расход втягивания секции ЭГР";
+CM_ SG_ 2566853160 EhSectionBoostExtendFlow "Ускоренный расход выдвижения секции ЭГР";
+CM_ BO_ 2566852904 "Конфигурации секции ЭГР";
+CM_ SG_ 2566852904 EhSectionWorkTime "Время работы секции ЭГР";
+CM_ SG_ 2566852904 EhSectionRectractFlow "Расход втягивания секции ЭГР";
+CM_ SG_ 2566852904 EhSectionMode "Режим работы секции ЭГР";
+CM_ SG_ 2566852904 EhSectionExtendFlow "Расход выдвижения секции ЭГР";
+CM_ SG_ 2566852904 EhSectionCurveType "Режим работы секции ЭГР";
+CM_ SG_ 2566852904 EhSectionBoostRectractFlow "Ускоренный расход втягивания секции ЭГР";
+CM_ SG_ 2566852904 EhSectionBoostExtendFlow "Ускоренный расход выдвижения секции ЭГР";
+CM_ BO_ 2566852648 "Настройки ЗНУ";
+CM_ SG_ 2566852648 TphRearConfUpSpeed "Скорость подъема ЗНУ";
+CM_ SG_ 2566852648 TphRearConfSlipAgressive "Агрессивность драфт режима ЗНУ";
+CM_ SG_ 2566852648 TphRearConfFloatMode "Плавающий режим ЗНУ";
+CM_ SG_ 2566852648 TphRearConfDraftMode "Драфт режим ЗНУ";
+CM_ SG_ 2566852648 TphRearConfDraftHeight "Высота драфт подъема ЗНУ";
+CM_ SG_ 2566852648 TphRearConfDownSpeed "Скорость опускания ЗНУ";
+CM_ SG_ 2566852648 TphRearConfAutoMin "Минимальная высота в автоматическом режиме";
+CM_ SG_ 2566852648 TphRearConfAutoMax "Максимальная высота в автоматическом режиме";
+CM_ BO_ 2566897192 "Fan config modes";
+CM_ BO_ 2566897230 "Fan drive controller status";
+CM_ SG_ 2566897230 FdPwmDC "Процент заполнения клапан управления вентилятором";
+CM_ BO_ 2566831438 "Fan Drive";
+CM_ BO_ 2566840369 "Vehicle Distance";
+CM_ BO_ 2365522993 "Weichai Engine Control";
+CM_ SG_ 2365522993 WE_AccelPedalPrc "Процент нажатия педали для Weichai";
+CM_ BO_ 2566847537 "Dash Display";
+CM_ SG_ 2566847537 EngineOilFilterDiffPressure "Engine Oil Filter Differential Pressure";
+CM_ SG_ 2566847537 EngineFuelFilterDiffPressure "Engine Fuel Filter Differential Pressure";
+CM_ BO_ 2566838784 "Software Identification";
+CM_ SG_ 2566838784 NumberSwIdentificationFields "Number of Software Identification Fields";
+CM_ BO_ 2566824960 "Engine Temperature 2";
+CM_ BO_ 2566802993 "Door Control 1";
+CM_ BO_ 2365484270 "Tachograph";
+CM_ BO_ 2566834688 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834688 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834688 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834688 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834688 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834688 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834688 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834688 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834688 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834688 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566841344 EngineWaitStartLamp "Engine Wait to Start Lamp";
+CM_ BO_ 2364539894 "Electronic Engine Controller 2 - 0xF6 Control";
+CM_ SG_ 2364539894 ActualMaxAvailableEngineTorque "Actual Maximum Available Engine - Percent Torque";
+CM_ SG_ 2364539894 MomentaryEngineMaxPowerFeedback "Momentary Engine Maximum Power Enable Feedback";
+CM_ BO_ 2566848256 "Water in Fuel Indicator";
+CM_ BO_ 2566846208 "Vehicle Electrical Power 1 Engine";
+CM_ SG_ 2566846208 BatteryPotential "Battery Potential/Power Input 1";
+CM_ BO_ 2566844928 "Fuel Economy (Liquid)";
+CM_ BO_ 2566845952 "Intake/Exhaust Conditions 1";
+CM_ SG_ 2566845952 EngineAirFilter1DiffPressure "Engine Air Filter 1 Differential Pressure";
+CM_ BO_ 2566845696 "Ambient Conditions";
+CM_ BO_ 2566840064 "Electronic Engine Controller 3";
+CM_ SG_ 2566840064 EngineParasiticLossPercentTorque "Estimated Engine Parasitic Losses - Percent Torque";
+CM_ SG_ 2566840064 EngineDesiredOpSpeedAsymyAdj "Engine's Desired Operating Speed Asymmetry Adjustment";
+CM_ BO_ 2364539648 "Electronic Engine Controller 2";
+CM_ SG_ 2364539648 ActualMaxAvailableEngineTorque "Actual Maximum Available Engine - Percent Torque";
+CM_ SG_ 2364539648 MomentaryEngineMaxPowerFeedback "Momentary Engine Maximum Power Enable Feedback";
+CM_ BO_ 2566885681 "Данные калибровки статического радиуса колеса";
+CM_ SG_ 2566885681 CalibrationTime "Время сохранения калибровки в формате Unix";
+CM_ SG_ 2566885681 WheelStaticRadius "Статический радиус колеса";
+CM_ SG_ 2566885681 WheelRadiusCalibSts "Статус калибровки статического радиуса";
+CM_ BO_ 2566885425 "Данные датчика угла поворота рамы";
+CM_ SG_ 2566885425 ChassisRotateAngle "Угол поворота рамы 1градус/бит";
+CM_ SG_ 2566885425 ChassisAngleSensVoltage "Напряжение на канале датчика угла поворота рамы";
+CM_ BO_ 2564827136 "Cab Message 1";
+CM_ SG_ 2564827136 DieselPartFilterRegInhibitSw "Diesel Particulate Filter Regeneration Inhibit Switch";
+CM_ SG_ 2564827136 DieselPartFilterRegForceSw "Diesel Particulate Filter Regeneration Force Switch";
+CM_ BO_ 2566842624 "Fuel Consumption, Liquid";
+CM_ BO_ 2566841600 "Engine Hours, Revolutions";
+CM_ SG_ 2566841600 EngineTotalHoursOperation "Engine Total Hours of Operation";
+CM_ BO_ 2566842161 "Vehicle Hours";
+CM_ BO_ 2566862120 "Яркость подсветки полей G подлкотника МФП";
+CM_ SG_ 2566862120 ArmButtonIndG2 "Индикация кнопки МФП: 0-выкл; 1-вкл";
+CM_ SG_ 2566862120 ArmButtonIndG1 "Индикация кнопки МФП: 0-выкл; 1-вкл";
+CM_ SG_ 2566862120 ArmButtonIndH2 "Индикация кнопки МФП: 0-выкл; 1-вкл";
+CM_ SG_ 2566862120 ArmButtonIndH1 "Индикация кнопки МФП: 0-выкл; 1-вкл";
+CM_ SG_ 2566862120 ARM_Brightness_G "Яркость подсветки полей G";
+CM_ BO_ 2566861352 "Яркость подсветки кнопок C подлкотника МФП";
+CM_ SG_ 2566861352 ARM_Brightness_C "Яркость подсветки кнопок С";
+CM_ BO_ 2566861096 "Яркость подсветки кнопок А,Е,Н подлкотника МФП";
+CM_ SG_ 2566861096 ArmButtonLum_H "Подсветка МФП Тумблеры смех блокировкой";
+CM_ SG_ 2566861096 ArmButtonLum_E "Подсветка МФП Доп кнопки";
+CM_ SG_ 2566861096 ArmButtonLum_A "Подсветка МФП Основной джойстик А";
+CM_ SG_ 2566861096 ARM_Brightness_AEH "Яркость подсветки кнопок А,Е,Н";
+CM_ BO_ 2566799400 "Статус подсветки полей освещения КУО";
+CM_ SG_ 2566799400 KUO_FieldCmd_21 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_20 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_19 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_18 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_17 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_16 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_15 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_14 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_13 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_12 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ SG_ 2566799400 KUO_FieldCmd_11 "Освещенность поля: 0b0000=выкл; 0b0011=зеленый; 0b0111=белый;";
+CM_ BO_ 2566545960 "Статус подсветки кнопок КУО";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_9 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_8 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_7 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_6 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_5 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_4 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_3 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_2 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_10 "Подсветка кнопки";
+CM_ SG_ 2566545960 KUO_BtnLightCmd_1 "Подсветка кнопки";
+CM_ BO_ 2563782440 "Яркость подсветки кнопок КУО";
+CM_ SG_ 2563782440 AMB_Brightness_Prc "Яркость амбиентной подсветки";
+CM_ SG_ 2563782440 KUO_FieldsBrightness_Prc "Яркость подсветки полей освещения КУО";
+CM_ SG_ 2563782440 KUO_Brightness_Prc "Яркость подсветки кнопок КУО";
+CM_ BO_ 2566803496 "Конфигурация амбиентной подсветки";
+CM_ SG_ 2566803496 AMB_FaultCmd "Включить индикатор аварии: 0b00 - Включение; 0b01 - Включить";
+CM_ SG_ 2566803496 AMB_Command "Состояние амбиентной подсветки: 0b00 - Включение; 0b01 - Включить";
+CM_ BO_ 2365473079 "Статус нажатия кнопок КУО";
+CM_ BO_ 2566882344 "Команды калибровки 1";
+CM_ SG_ 2566882344 AccelPedalCalibCmd "Команда калибровки датчика ПНУ";
+CM_ SG_ 2566882344 RearTphSensCalibCmd "Команда калибровки датчика ЗНУ";
+CM_ SG_ 2566882344 FrontTphSensCalibCmd "Команда калибровки датчика ПНУ";
+CM_ SG_ 2566882344 WSR_StartStopCmd "Команды калибровки статического радиуса :1 - СТАРТ 2 - СТОП";
+CM_ SG_ 2566882344 WSR_ResetDefaultValue "Сброс статического радиуса колеса";
+CM_ SG_ 2566882344 ChassisAngleSensCalibCmd "Команда калибровки датчика угла поворота рамы";
+CM_ BO_ 2566890792 "Конфигурация кнопок рабочего освещения";
+CM_ SG_ 2566890792 WL_Config_Btn2 "Рабочее освещение конфиг-кнопки 2";
+CM_ SG_ 2566890792 WL_Config_Btn1 "Рабочее освещение конфиг-кнопки 1";
+CM_ BO_ 2566890536 "Время формата Unix";
+CM_ SG_ 2566890536 SystemUnixTime "Время в формате Unix";
+CM_ BO_ 2566890033 "ОТВЕТ НА ПОЛУЧЕНИЕ КОМПЛЕКТАЦИИ";
+CM_ SG_ 2566890033 EqpAckCode "Статус комплектации";
+CM_ BO_ 2566889768 "EQUIPMENT SINGLE PARAM";
+CM_ SG_ 2566889768 EqpParamNewValue "Новое значение параметра комплектации";
+CM_ SG_ 2566889768 EqpParamIndex "Индекс параметра комплектации";
+CM_ BO_ 2566889512 "EQUIPMENT";
+CM_ SG_ 2566889512 EqpVehicleType "Тип машины";
+CM_ SG_ 2566889512 EqpVehicleSeries "Серия машины";
+CM_ SG_ 2566889512 EqpVehicleModel "Модель машины";
+CM_ SG_ 2566889512 EqpParam "Параметр комплектации";
+CM_ BO_ 2566834737 "Active Diagnostic Trouble Codes SA 0x31";
+CM_ SG_ 2566834737 FailureModeIdentifier "Fmi from 0 to 31";
+CM_ SG_ 2566834737 FlashRedStopLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834737 FlashProtectLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834737 FlashMalfunctionIndicatorLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834737 FlashAmberWarningLamp "00 - Slow Flash; 01 - Fast Flash; 10 - Reserved; 11 - Do Not Flash";
+CM_ SG_ 2566834737 MalfunctionIndicatorLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834737 RedStopLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834737 AmberWarningLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ SG_ 2566834737 ProtectLamp "00 - Lamp Off; 01 - Lamp On";
+CM_ BO_ 2365449777 "Hydraulic Braking System";
+CM_ SG_ 2365449777 HydraulicBrakePSupplyState2 "Hydraulic Brake Pressure Supply State Circuit 2";
+CM_ SG_ 2365449777 HydraulicBrakePSupplyState1 "Hydraulic Brake Pressure Supply State Circuit 1";
+CM_ SG_ 2365449777 HydraulicBrakeFluidLevelSwitch "Hydraulic Brake Fluid Level Switch";
+CM_ SG_ 2365449777 HydraulicBrakeAudibleWarning "Hydraulic Brake System Audible Warning Command";
+CM_ SG_ 2365449777 HydraulicBrakePWarning2 "Hydraulic Brake Pressure Warning State Circuit 2";
+CM_ SG_ 2365449777 HydraulicBrakePWarning1 "Hydraulic Brake Pressure Warning State Circuit 1";
+CM_ SG_ 2365449777 HydraulicBrakePressureCircuit2 "Измеренное гидравлическое давление в контуре 2 гидравлической тормозной системы";
+CM_ SG_ 2365449777 HydraulicBrakePressureCircuit1 "Измеренное гидравлическое давление в контуре 1 гидравлической тормозной системы";
+CM_ BO_ 2566892081 "Operator Wrong Actions Events";
+CM_ SG_ 2566892081 WrongActionEvent4 "Событие-оповещение 4";
+CM_ SG_ 2566892081 WrongActionEvent3 "Событие-оповещение 3";
+CM_ SG_ 2566892081 WrongActionEvent2 "Событие-оповещение 2";
+CM_ SG_ 2566892081 WrongActionEvent1 "Событие-оповещение 1";
+CM_ BO_ 2566882353 "Данные калибровки датчика угла поворота рамы";
+CM_ SG_ 2566882353 ChassisAngleSensCalibSts "Статус калибровки датчика угла поворота рамы: 0x0 - Не калиброван; 0x1 - Откалиброван; 0x2 - Успешн; 0xE - Ошибка; ";
+CM_ SG_ 2566882353 CalibrationTime "Время сохранения калибровки в формате Unix";
+CM_ BO_ 2566881329 "Наличие оператора";
+CM_ SG_ 2566881329 TractorWorkMode "Режим работы машины";
+CM_ SG_ 2566881329 FrontTphPosition "Положение ПНУ";
+CM_ SG_ 2566881329 RearTphPosition "Положение ЗНУ";
+CM_ SG_ 2566881329 IgnitionStatus "Статус зажигания";
+CM_ SG_ 2566881329 OperatorSeatSwitchStatus "Статус присутствия оператора: 00 - Оператор не в кресле; 01 - Оператор в кресле";
+CM_ BO_ 2566844721 "Cruise Control/Vehicle Speed 1";
+CM_ BO_ 2566827569 "Air Supply Pressure";
+CM_ BO_ 2566809649 "Vehicle Fluids";
+CM_ SG_ 2566809649 HydraulicOilFilterRestrictionSw "Hydraulic Oil Filter Restriction Switch";
+CM_ BO_ 2565482545 "Запрос PGN у 0x28 с 0x31";
+CM_ BO_ 2365558833 "Давление в рулевой системе";
+CM_ SG_ 2365558833 SteeringSystemPressure "Давления в гидросистеме рулевого управления 16kPa/bit";
+CM_ BO_ 2566846257 "Vehicle Electrical Power 1";
+CM_ SG_ 2566846257 BatteryPotential "Battery Potential/Power Input 1";
+CM_ BO_ 2566844160 "Engine Fluid Level/Pressure 1";
+CM_ SG_ 2566844160 EngineExtCrankBlowPressure "Engine Extended Crankcase Blow-by Pressure";
+CM_ BO_ 2566843904 "Engine Temperature 1";
+CM_ SG_ 2566843904 EngineIntercoolerThermostatOpn "Engine Intercooler Thermostat Opening";
+CM_ SG_ 2566843904 EngineCoolantTemperature "Engine Coolant Temperature";
+CM_ BO_ 2364539904 "Electronic Engine Controller 1";
+CM_ SG_ 2364539904 DemandEnginePercentTorque "Driver's Demand Engine - Percent Torque";
+CM_ SG_ 2364539904 EngineTorqueHighResolution "Actual Engine - Percent Torque High Resolution";
+CM_ SG_ 2364539904 EngineDemandPercentTorque "Driver's Demand Engine - Percent Torque";
+CM_ SG_ 2364539904 EngineActualPercentTorque "Actual Engine - Percent Torque";
+BA_DEF_ BO_  "J1939FdTpADS" INT 0 52;
+BA_DEF_ BO_  "J1939FdTpADT" INT 0 255;
+BA_DEF_ BO_  "J1939PgAppearanceOnBus" ENUM  "Default","CAN_Extended","CANFD_Extended";
+BA_DEF_ BO_  "J1939CPgSendTimeout" INT -1 3600000;
+BA_DEF_ BO_  "J1939CPgTOS" INT 0 7;
+BA_DEF_ BO_  "J1939CPgTF" INT 0 7;
+BA_DEF_ BU_  "J1939MultiPgSendTimeout" INT 0 3600000;
+BA_DEF_ BU_  "J1939MultiPgSizeThreshold" INT 0 64;
+BA_DEF_ BU_  "J1939MultiPgBroadcastType" ENUM  "FBFF","FEFF";
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_ BO_  "FsJ1939UseCrcAndCounter" STRING ;
+BA_DEF_ BO_  "FsJ1939NeedsSHM" ENUM  "No","Yes";
+BA_DEF_ BO_  "FsJ1939Delay" INT 0 1000;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "J1939FdTpADS" 0;
+BA_DEF_DEF_  "J1939FdTpADT" 0;
+BA_DEF_DEF_  "J1939PgAppearanceOnBus" "Default";
+BA_DEF_DEF_  "J1939CPgSendTimeout" -1;
+BA_DEF_DEF_  "J1939CPgTOS" 2;
+BA_DEF_DEF_  "J1939CPgTF" 0;
+BA_DEF_DEF_  "J1939MultiPgSendTimeout" 2;
+BA_DEF_DEF_  "J1939MultiPgSizeThreshold" 56;
+BA_DEF_DEF_  "J1939MultiPgBroadcastType" "FBFF";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "FsJ1939UseCrcAndCounter" "";
+BA_DEF_DEF_  "FsJ1939NeedsSHM" "No";
+BA_DEF_DEF_  "FsJ1939Delay" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DatabaseVersion" "1.0.0";
+BA_ "BusType" "CAN";
+BA_ "DBName" "Tractor_J1939_Main";
+BA_ "NmStationAddress" BU_ BackEH_TPH_Hande 128;
+BA_ "NmStationAddress" BU_ KeylessController 52;
+BA_ "NmStationAddress" BU_ ArmrestConsole 225;
+BA_ "NmStationAddress" BU_ LightConsole_KUO 55;
+BA_ "NmStationAddress" BU_ BackEH_S6_Hande 134;
+BA_ "NmStationAddress" BU_ BackEH_S5_Hande 133;
+BA_ "NmStationAddress" BU_ BackEH_S4_Hande 132;
+BA_ "NmStationAddress" BU_ BackEH_S3_Hande 131;
+BA_ "NmStationAddress" BU_ BackEH_S2_Hande 130;
+BA_ "NmStationAddress" BU_ BackEH_S1_Hande 129;
+BA_ "NmStationAddress" BU_ Radar_DIS01 77;
+BA_ "NmStationAddress" BU_ Engine 0;
+BA_ "NmStationAddress" BU_ TCU 3;
+BA_ "NmStationAddress" BU_ DisplayHMI 40;
+BA_ "NmStationAddress" BU_ BU702_E4 228;
+BA_ "NmStationAddress" BU_ BU702_E3 227;
+BA_ "NmStationAddress" BU_ CabController 49;
+BA_ "GenMsgCycleTime" BO_ 2565805105 100;
+BA_ "GenMsgSendType" BO_ 2565805105 0;
+BA_ "VFrameFormat" BO_ 2565805105 3;
+BA_ "GenMsgCycleTime" BO_ 2566799409 500;
+BA_ "GenMsgSendType" BO_ 2566799409 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2566799409 20;
+BA_ "VFrameFormat" BO_ 2566799409 3;
+BA_ "GenMsgCycleTime" BO_ 2566858280 250;
+BA_ "GenMsgSendType" BO_ 2566858280 0;
+BA_ "VFrameFormat" BO_ 2566858280 3;
+BA_ "GenMsgCycleTime" BO_ 2566881585 100;
+BA_ "GenMsgSendType" BO_ 2566881585 0;
+BA_ "VFrameFormat" BO_ 2566881585 3;
+BA_ "GenMsgCycleTime" BO_ 2566856744 100;
+BA_ "GenMsgSendType" BO_ 2566856744 0;
+BA_ "VFrameFormat" BO_ 2566856744 3;
+BA_ "GenMsgSendType" BO_ 2566883121 0;
+BA_ "GenMsgCycleTime" BO_ 2566883121 100;
+BA_ "VFrameFormat" BO_ 2566883121 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566858024 100;
+BA_ "GenMsgSendType" BO_ 2566858024 0;
+BA_ "GenMsgCycleTime" BO_ 2566858024 500;
+BA_ "VFrameFormat" BO_ 2566858024 3;
+BA_ "GenMsgSendType" BO_ 2566882865 0;
+BA_ "GenMsgCycleTime" BO_ 2566882865 100;
+BA_ "VFrameFormat" BO_ 2566882865 3;
+BA_ "GenMsgSendType" BO_ 2566882609 0;
+BA_ "GenMsgCycleTime" BO_ 2566882609 100;
+BA_ "VFrameFormat" BO_ 2566882609 3;
+BA_ "GenMsgSendType" BO_ 2565472289 7;
+BA_ "VFrameFormat" BO_ 2565472289 3;
+BA_ "GenMsgSendType" BO_ 2565472305 7;
+BA_ "VFrameFormat" BO_ 2565472305 3;
+BA_ "GenMsgSendType" BO_ 2566841088 7;
+BA_ "GenMsgCycleTime" BO_ 2566841088 5000;
+BA_ "VFrameFormat" BO_ 2566841088 3;
+BA_ "GenMsgSendType" BO_ 2565537576 7;
+BA_ "VFrameFormat" BO_ 2565537576 3;
+BA_ "GenMsgSendType" BO_ 2565472296 7;
+BA_ "VFrameFormat" BO_ 2565472296 3;
+BA_ "GenMsgCycleTime" BO_ 2566834822 1000;
+BA_ "GenMsgSendType" BO_ 2566834822 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834822 1;
+BA_ "VFrameFormat" BO_ 2566834822 3;
+BA_ "GenMsgCycleTime" BO_ 2566834821 1000;
+BA_ "GenMsgSendType" BO_ 2566834821 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834821 1;
+BA_ "VFrameFormat" BO_ 2566834821 3;
+BA_ "GenMsgCycleTime" BO_ 2566834820 1000;
+BA_ "GenMsgSendType" BO_ 2566834820 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834820 1;
+BA_ "VFrameFormat" BO_ 2566834820 3;
+BA_ "GenMsgCycleTime" BO_ 2566834819 1000;
+BA_ "GenMsgSendType" BO_ 2566834819 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834819 1;
+BA_ "VFrameFormat" BO_ 2566834819 3;
+BA_ "GenMsgCycleTime" BO_ 2566834818 1000;
+BA_ "GenMsgSendType" BO_ 2566834818 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834818 1;
+BA_ "VFrameFormat" BO_ 2566834818 3;
+BA_ "GenMsgCycleTime" BO_ 2566834817 1000;
+BA_ "GenMsgSendType" BO_ 2566834817 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834817 1;
+BA_ "VFrameFormat" BO_ 2566834817 3;
+BA_ "GenMsgCycleTime" BO_ 2566834816 1000;
+BA_ "GenMsgSendType" BO_ 2566834816 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834816 1;
+BA_ "VFrameFormat" BO_ 2566834816 3;
+BA_ "GenMsgCycleTime" BO_ 2566834691 1000;
+BA_ "GenMsgSendType" BO_ 2566834691 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834691 1;
+BA_ "VFrameFormat" BO_ 2566834691 3;
+BA_ "GenMsgCycleTime" BO_ 2566834743 1000;
+BA_ "GenMsgSendType" BO_ 2566834743 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834743 1;
+BA_ "VFrameFormat" BO_ 2566834743 3;
+BA_ "GenMsgCycleTime" BO_ 2566834913 1000;
+BA_ "GenMsgSendType" BO_ 2566834913 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834913 1;
+BA_ "VFrameFormat" BO_ 2566834913 3;
+BA_ "GenMsgCycleTime" BO_ 2566834740 1000;
+BA_ "GenMsgSendType" BO_ 2566834740 0;
+BA_ "TpJ1939VarDlc" BO_ 2566834740 1;
+BA_ "VFrameFormat" BO_ 2566834740 3;
+BA_ "GenMsgCycleTime" BO_ 2566852660 500;
+BA_ "GenMsgSendType" BO_ 2566852660 0;
+BA_ "VFrameFormat" BO_ 2566852660 3;
+BA_ "GenMsgCycleTime" BO_ 2566860840 100;
+BA_ "GenMsgSendType" BO_ 2566860840 0;
+BA_ "VFrameFormat" BO_ 2566860840 3;
+BA_ "GenMsgCycleTime" BO_ 2566861864 100;
+BA_ "GenMsgSendType" BO_ 2566861864 0;
+BA_ "VFrameFormat" BO_ 2566861864 3;
+BA_ "GenMsgCycleTime" BO_ 2566861608 100;
+BA_ "GenMsgSendType" BO_ 2566861608 0;
+BA_ "VFrameFormat" BO_ 2566861608 3;
+BA_ "GenMsgCycleTime" BO_ 2566850529 100;
+BA_ "GenMsgSendType" BO_ 2566850529 0;
+BA_ "VFrameFormat" BO_ 2566850529 3;
+BA_ "GenMsgCycleTime" BO_ 2566849761 100;
+BA_ "GenMsgSendType" BO_ 2566849761 0;
+BA_ "VFrameFormat" BO_ 2566849761 3;
+BA_ "GenMsgCycleTime" BO_ 2566849505 100;
+BA_ "GenMsgSendType" BO_ 2566849505 0;
+BA_ "VFrameFormat" BO_ 2566849505 3;
+BA_ "GenMsgCycleTime" BO_ 2365526753 100;
+BA_ "GenMsgSendType" BO_ 2365526753 0;
+BA_ "VFrameFormat" BO_ 2365526753 3;
+BA_ "GenMsgCycleTime" BO_ 2365526497 100;
+BA_ "GenMsgSendType" BO_ 2365526497 0;
+BA_ "VFrameFormat" BO_ 2365526497 3;
+BA_ "GenMsgCycleTime" BO_ 2365523681 100;
+BA_ "GenMsgSendType" BO_ 2365523681 0;
+BA_ "VFrameFormat" BO_ 2365523681 3;
+BA_ "GenMsgCycleTime" BO_ 2365523425 100;
+BA_ "GenMsgSendType" BO_ 2365523425 0;
+BA_ "VFrameFormat" BO_ 2365523425 3;
+BA_ "GenMsgCycleTime" BO_ 2365522657 100;
+BA_ "GenMsgSendType" BO_ 2365522657 0;
+BA_ "VFrameFormat" BO_ 2365522657 3;
+BA_ "GenMsgCycleTime" BO_ 2365522401 100;
+BA_ "GenMsgSendType" BO_ 2365522401 0;
+BA_ "VFrameFormat" BO_ 2365522401 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566853928 100;
+BA_ "GenMsgSendType" BO_ 2566853928 0;
+BA_ "GenMsgCycleTime" BO_ 2566853928 500;
+BA_ "VFrameFormat" BO_ 2566853928 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566853672 100;
+BA_ "GenMsgSendType" BO_ 2566853672 0;
+BA_ "GenMsgCycleTime" BO_ 2566853672 500;
+BA_ "VFrameFormat" BO_ 2566853672 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566854184 100;
+BA_ "GenMsgSendType" BO_ 2566854184 0;
+BA_ "GenMsgCycleTime" BO_ 2566854184 500;
+BA_ "VFrameFormat" BO_ 2566854184 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566853416 100;
+BA_ "GenMsgSendType" BO_ 2566853416 0;
+BA_ "GenMsgCycleTime" BO_ 2566853416 500;
+BA_ "VFrameFormat" BO_ 2566853416 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566853160 100;
+BA_ "GenMsgSendType" BO_ 2566853160 0;
+BA_ "GenMsgCycleTime" BO_ 2566853160 500;
+BA_ "VFrameFormat" BO_ 2566853160 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566852904 100;
+BA_ "GenMsgSendType" BO_ 2566852904 0;
+BA_ "GenMsgCycleTime" BO_ 2566852904 500;
+BA_ "VFrameFormat" BO_ 2566852904 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566852648 100;
+BA_ "GenMsgSendType" BO_ 2566852648 0;
+BA_ "GenMsgCycleTime" BO_ 2566852648 500;
+BA_ "VFrameFormat" BO_ 2566852648 3;
+BA_ "GenMsgCycleTime" BO_ 2566795298 100;
+BA_ "GenMsgSendType" BO_ 2566795298 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2566795298 100;
+BA_ "VFrameFormat" BO_ 2566795298 3;
+BA_ "GenMsgCycleTime" BO_ 2566787200 100;
+BA_ "GenMsgSendType" BO_ 2566787200 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2566787200 100;
+BA_ "VFrameFormat" BO_ 2566787200 3;
+BA_ "GenMsgCycleTime" BO_ 2566897192 100;
+BA_ "GenMsgSendType" BO_ 2566897192 7;
+BA_ "VFrameFormat" BO_ 2566897192 3;
+BA_ "GenMsgCycleTime" BO_ 2566897230 1000;
+BA_ "GenMsgSendType" BO_ 2566897230 0;
+BA_ "VFrameFormat" BO_ 2566897230 3;
+BA_ "GenMsgCycleTime" BO_ 2566831438 1000;
+BA_ "GenMsgSendType" BO_ 2566831438 0;
+BA_ "VFrameFormat" BO_ 2566831438 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164217137 20;
+BA_ "GenMsgSendType" BO_ 2164217137 0;
+BA_ "GenMsgCycleTime" BO_ 2164217137 100;
+BA_ "VFrameFormat" BO_ 2164217137 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164216881 20;
+BA_ "GenMsgSendType" BO_ 2164216881 0;
+BA_ "GenMsgCycleTime" BO_ 2164216881 100;
+BA_ "VFrameFormat" BO_ 2164216881 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164216625 20;
+BA_ "GenMsgSendType" BO_ 2164216625 0;
+BA_ "GenMsgCycleTime" BO_ 2164216625 100;
+BA_ "VFrameFormat" BO_ 2164216625 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164216369 20;
+BA_ "GenMsgSendType" BO_ 2164216369 0;
+BA_ "GenMsgCycleTime" BO_ 2164216369 100;
+BA_ "VFrameFormat" BO_ 2164216369 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164216113 20;
+BA_ "GenMsgCycleTime" BO_ 2164216113 100;
+BA_ "GenMsgSendType" BO_ 2164216113 0;
+BA_ "VFrameFormat" BO_ 2164216113 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164215857 20;
+BA_ "GenMsgSendType" BO_ 2164215857 0;
+BA_ "GenMsgCycleTime" BO_ 2164215857 100;
+BA_ "VFrameFormat" BO_ 2164215857 3;
+BA_ "GenMsgSendType" BO_ 2566840369 0;
+BA_ "GenMsgCycleTime" BO_ 2566840369 100;
+BA_ "VFrameFormat" BO_ 2566840369 3;
+BA_ "GenMsgSendType" BO_ 2365522993 0;
+BA_ "GenMsgCycleTime" BO_ 2365522993 20;
+BA_ "VFrameFormat" BO_ 2365522993 3;
+BA_ "GenMsgSendType" BO_ 2566847537 0;
+BA_ "GenMsgCycleTime" BO_ 2566847537 1000;
+BA_ "VFrameFormat" BO_ 2566847537 3;
+BA_ "TpJ1939VarDlc" BO_ 2566838784 1;
+BA_ "GenMsgSendType" BO_ 2566838784 7;
+BA_ "VFrameFormat" BO_ 2566838784 3;
+BA_ "GenMsgSendType" BO_ 2566824960 0;
+BA_ "GenMsgCycleTime" BO_ 2566824960 1000;
+BA_ "VFrameFormat" BO_ 2566824960 3;
+BA_ "GenMsgSendType" BO_ 2566802993 0;
+BA_ "GenMsgCycleTime" BO_ 2566802993 100;
+BA_ "VFrameFormat" BO_ 2566802993 3;
+BA_ "GenMsgSendType" BO_ 2365484270 0;
+BA_ "GenMsgCycleTime" BO_ 2365484270 50;
+BA_ "VFrameFormat" BO_ 2365484270 3;
+BA_ "TpJ1939VarDlc" BO_ 2566834688 1;
+BA_ "GenMsgSendType" BO_ 2566834688 0;
+BA_ "GenMsgCycleTime" BO_ 2566834688 1000;
+BA_ "VFrameFormat" BO_ 2566834688 3;
+BA_ "GenMsgSendType" BO_ 2566841344 0;
+BA_ "GenMsgCycleTime" BO_ 2566841344 1000;
+BA_ "VFrameFormat" BO_ 2566841344 3;
+BA_ "GenMsgSendType" BO_ 2364539894 0;
+BA_ "GenMsgCycleTime" BO_ 2364539894 50;
+BA_ "VFrameFormat" BO_ 2364539894 3;
+BA_ "GenMsgSendType" BO_ 2566848256 0;
+BA_ "GenMsgCycleTime" BO_ 2566848256 10000;
+BA_ "VFrameFormat" BO_ 2566848256 3;
+BA_ "GenMsgSendType" BO_ 2566846208 0;
+BA_ "GenMsgCycleTime" BO_ 2566846208 1000;
+BA_ "VFrameFormat" BO_ 2566846208 3;
+BA_ "GenMsgSendType" BO_ 2566844928 0;
+BA_ "GenMsgCycleTime" BO_ 2566844928 100;
+BA_ "VFrameFormat" BO_ 2566844928 3;
+BA_ "GenMsgSendType" BO_ 2566845952 0;
+BA_ "GenMsgCycleTime" BO_ 2566845952 500;
+BA_ "VFrameFormat" BO_ 2566845952 3;
+BA_ "GenMsgSendType" BO_ 2566845696 0;
+BA_ "GenMsgCycleTime" BO_ 2566845696 1000;
+BA_ "VFrameFormat" BO_ 2566845696 3;
+BA_ "GenMsgSendType" BO_ 2566840064 0;
+BA_ "GenMsgCycleTime" BO_ 2566840064 250;
+BA_ "VFrameFormat" BO_ 2566840064 3;
+BA_ "GenMsgSendType" BO_ 2364539648 0;
+BA_ "GenMsgCycleTime" BO_ 2364539648 50;
+BA_ "VFrameFormat" BO_ 2364539648 3;
+BA_ "GenMsgCycleTime" BO_ 2566885681 500;
+BA_ "GenMsgSendType" BO_ 2566885681 0;
+BA_ "VFrameFormat" BO_ 2566885681 3;
+BA_ "GenMsgCycleTime" BO_ 2566885425 50;
+BA_ "GenMsgSendType" BO_ 2566885425 0;
+BA_ "VFrameFormat" BO_ 2566885425 3;
+BA_ "GenMsgSendType" BO_ 2564827136 1;
+BA_ "VFrameFormat" BO_ 2564827136 3;
+BA_ "GenMsgSendType" BO_ 2566842624 7;
+BA_ "VFrameFormat" BO_ 2566842624 3;
+BA_ "GenMsgSendType" BO_ 2566841600 7;
+BA_ "VFrameFormat" BO_ 2566841600 3;
+BA_ "GenMsgSendType" BO_ 2566842161 0;
+BA_ "GenMsgCycleTime" BO_ 2566842161 1000;
+BA_ "VFrameFormat" BO_ 2566842161 3;
+BA_ "GenMsgSendType" BO_ 2566862120 0;
+BA_ "GenMsgCycleTime" BO_ 2566862120 100;
+BA_ "VFrameFormat" BO_ 2566862120 3;
+BA_ "GenMsgSendType" BO_ 2566861352 0;
+BA_ "GenMsgCycleTime" BO_ 2566861352 100;
+BA_ "VFrameFormat" BO_ 2566861352 3;
+BA_ "GenMsgSendType" BO_ 2566861096 0;
+BA_ "GenMsgCycleTime" BO_ 2566861096 100;
+BA_ "VFrameFormat" BO_ 2566861096 3;
+BA_ "GenMsgSendType" BO_ 2566799400 0;
+BA_ "GenMsgCycleTime" BO_ 2566799400 500;
+BA_ "VFrameFormat" BO_ 2566799400 3;
+BA_ "GenMsgSendType" BO_ 2566545960 0;
+BA_ "GenMsgCycleTime" BO_ 2566545960 500;
+BA_ "VFrameFormat" BO_ 2566545960 3;
+BA_ "GenMsgSendType" BO_ 2563782440 0;
+BA_ "GenMsgCycleTime" BO_ 2563782440 500;
+BA_ "VFrameFormat" BO_ 2563782440 3;
+BA_ "GenMsgSendType" BO_ 2566803496 0;
+BA_ "GenMsgCycleTime" BO_ 2566803496 500;
+BA_ "VFrameFormat" BO_ 2566803496 3;
+BA_ "GenMsgSendType" BO_ 2365473079 0;
+BA_ "GenMsgCycleTime" BO_ 2365473079 100;
+BA_ "VFrameFormat" BO_ 2365473079 3;
+BA_ "GenMsgSendType" BO_ 2566882344 7;
+BA_ "VFrameFormat" BO_ 2566882344 3;
+BA_ "GenMsgSendType" BO_ 2566890792 0;
+BA_ "GenMsgCycleTime" BO_ 2566890792 1000;
+BA_ "VFrameFormat" BO_ 2566890792 3;
+BA_ "GenMsgSendType" BO_ 2566890536 0;
+BA_ "GenMsgCycleTime" BO_ 2566890536 5000;
+BA_ "VFrameFormat" BO_ 2566890536 3;
+BA_ "GenMsgSendType" BO_ 2566890033 7;
+BA_ "VFrameFormat" BO_ 2566890033 3;
+BA_ "GenMsgSendType" BO_ 2566889768 7;
+BA_ "VFrameFormat" BO_ 2566889768 3;
+BA_ "GenMsgSendType" BO_ 2566889512 7;
+BA_ "VFrameFormat" BO_ 2566889512 3;
+BA_ "TpJ1939VarDlc" BO_ 2566834737 1;
+BA_ "GenMsgSendType" BO_ 2566834737 0;
+BA_ "GenMsgCycleTime" BO_ 2566834737 1000;
+BA_ "VFrameFormat" BO_ 2566834737 3;
+BA_ "GenMsgSendType" BO_ 2365449777 0;
+BA_ "GenMsgCycleTime" BO_ 2365449777 100;
+BA_ "VFrameFormat" BO_ 2365449777 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566892081 100;
+BA_ "GenMsgSendType" BO_ 2566892081 7;
+BA_ "GenMsgCycleTime" BO_ 2566892081 100;
+BA_ "VFrameFormat" BO_ 2566892081 3;
+BA_ "GenMsgSendType" BO_ 2566882353 0;
+BA_ "GenMsgCycleTime" BO_ 2566882353 200;
+BA_ "VFrameFormat" BO_ 2566882353 3;
+BA_ "GenMsgSendType" BO_ 2566881329 0;
+BA_ "GenMsgCycleTime" BO_ 2566881329 100;
+BA_ "VFrameFormat" BO_ 2566881329 3;
+BA_ "GenMsgSendType" BO_ 2566844721 0;
+BA_ "GenMsgCycleTime" BO_ 2566844721 100;
+BA_ "VFrameFormat" BO_ 2566844721 3;
+BA_ "GenMsgSendType" BO_ 2566827569 0;
+BA_ "GenMsgCycleTime" BO_ 2566827569 1000;
+BA_ "VFrameFormat" BO_ 2566827569 3;
+BA_ "GenMsgSendType" BO_ 2566809649 0;
+BA_ "GenMsgCycleTime" BO_ 2566809649 1000;
+BA_ "VFrameFormat" BO_ 2566809649 3;
+BA_ "GenMsgSendType" BO_ 2565482545 7;
+BA_ "VFrameFormat" BO_ 2565482545 3;
+BA_ "GenMsgSendType" BO_ 2365558833 0;
+BA_ "GenMsgCycleTime" BO_ 2365558833 100;
+BA_ "VFrameFormat" BO_ 2365558833 3;
+BA_ "GenMsgSendType" BO_ 2566846257 0;
+BA_ "GenMsgCycleTime" BO_ 2566846257 1000;
+BA_ "VFrameFormat" BO_ 2566846257 3;
+BA_ "GenMsgSendType" BO_ 2566847025 0;
+BA_ "GenMsgCycleTime" BO_ 2566847025 1000;
+BA_ "VFrameFormat" BO_ 2566847025 3;
+BA_ "GenMsgSendType" BO_ 2566844160 0;
+BA_ "GenMsgCycleTime" BO_ 2566844160 500;
+BA_ "VFrameFormat" BO_ 2566844160 3;
+BA_ "GenMsgCycleTime" BO_ 2566843904 1000;
+BA_ "GenMsgSendType" BO_ 2566843904 0;
+BA_ "VFrameFormat" BO_ 2566843904 3;
+BA_ "GenMsgSendType" BO_ 2364539904 0;
+BA_ "GenMsgCycleTime" BO_ 2364539904 10;
+BA_ "VFrameFormat" BO_ 2364539904 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566796834 100;
+BA_ "GenMsgSendType" BO_ 2566796834 0;
+BA_ "GenMsgCycleTime" BO_ 2566796834 100;
+BA_ "VFrameFormat" BO_ 2566796834 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566796578 100;
+BA_ "GenMsgSendType" BO_ 2566796578 0;
+BA_ "GenMsgCycleTime" BO_ 2566796578 100;
+BA_ "VFrameFormat" BO_ 2566796578 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566796322 100;
+BA_ "GenMsgSendType" BO_ 2566796322 0;
+BA_ "GenMsgCycleTime" BO_ 2566796322 100;
+BA_ "VFrameFormat" BO_ 2566796322 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566796066 100;
+BA_ "GenMsgSendType" BO_ 2566796066 0;
+BA_ "GenMsgCycleTime" BO_ 2566796066 100;
+BA_ "VFrameFormat" BO_ 2566796066 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566795810 100;
+BA_ "GenMsgSendType" BO_ 2566795810 0;
+BA_ "GenMsgCycleTime" BO_ 2566795810 100;
+BA_ "VFrameFormat" BO_ 2566795810 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566795554 100;
+BA_ "GenMsgSendType" BO_ 2566795554 0;
+BA_ "GenMsgCycleTime" BO_ 2566795554 100;
+BA_ "VFrameFormat" BO_ 2566795554 3;
+BA_ "GenMsgSendType" BO_ 2566788742 0;
+BA_ "GenMsgCycleTime" BO_ 2566788742 100;
+BA_ "GenMsgCycleTimeFast" BO_ 2566788742 100;
+BA_ "VFrameFormat" BO_ 2566788742 3;
+BA_ "GenMsgSendType" BO_ 2566788485 0;
+BA_ "GenMsgCycleTime" BO_ 2566788485 100;
+BA_ "VFrameFormat" BO_ 2566788485 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2566788228 100;
+BA_ "GenMsgSendType" BO_ 2566788228 0;
+BA_ "GenMsgCycleTime" BO_ 2566788228 100;
+BA_ "VFrameFormat" BO_ 2566788228 3;
+BA_ "GenMsgSendType" BO_ 2566787971 0;
+BA_ "GenMsgCycleTime" BO_ 2566787971 100;
+BA_ "GenMsgCycleTimeFast" BO_ 2566787971 100;
+BA_ "VFrameFormat" BO_ 2566787971 3;
+BA_ "GenMsgSendType" BO_ 2566787714 0;
+BA_ "GenMsgCycleTime" BO_ 2566787714 100;
+BA_ "GenMsgCycleTimeFast" BO_ 2566787714 100;
+BA_ "VFrameFormat" BO_ 2566787714 3;
+BA_ "GenMsgSendType" BO_ 2566787457 0;
+BA_ "GenMsgCycleTime" BO_ 2566787457 100;
+BA_ "GenMsgCycleTimeFast" BO_ 2566787457 100;
+BA_ "VFrameFormat" BO_ 2566787457 3;
+BA_ "VFrameFormat" BO_ 2365446221 3;
+BA_ "GenMsgSendType" BO_ 2164224228 7;
+BA_ "GenMsgCycleTime" BO_ 2164224228 10000;
+BA_ "VFrameFormat" BO_ 2164224228 3;
+BA_ "GenMsgSendType" BO_ 2164224227 7;
+BA_ "GenMsgCycleTime" BO_ 2164224227 10000;
+BA_ "VFrameFormat" BO_ 2164224227 3;
+BA_ "GenMsgSendType" BO_ 2164224254 7;
+BA_ "GenMsgCycleTime" BO_ 2164224254 1000;
+BA_ "VFrameFormat" BO_ 2164224254 3;
+BA_ "GenMsgSendType" BO_ 2164225064 7;
+BA_ "VFrameFormat" BO_ 2164225064 3;
+BA_ "GenMsgSendType" BO_ 2164225073 7;
+BA_ "VFrameFormat" BO_ 2164225073 3;
+BA_ "GenMsgSendType" BO_ 2164224552 7;
+BA_ "VFrameFormat" BO_ 2164224552 3;
+BA_ "GenMsgSendType" BO_ 2164224561 7;
+BA_ "VFrameFormat" BO_ 2164224561 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164224808 1;
+BA_ "GenMsgCycleTime" BO_ 2164224808 10;
+BA_ "GenMsgSendType" BO_ 2164224808 7;
+BA_ "VFrameFormat" BO_ 2164224808 3;
+BA_ "GenMsgSendType" BO_ 2164224817 7;
+BA_ "VFrameFormat" BO_ 2164224817 3;
+BA_ "GenMsgCycleTime" BO_ 2164221412 500;
+BA_ "GenMsgSendType" BO_ 2164221412 0;
+BA_ "VFrameFormat" BO_ 2164221412 3;
+BA_ "GenMsgCycleTime" BO_ 2164221156 500;
+BA_ "GenMsgSendType" BO_ 2164221156 0;
+BA_ "VFrameFormat" BO_ 2164221156 3;
+BA_ "GenMsgCycleTime" BO_ 2164220900 500;
+BA_ "GenMsgSendType" BO_ 2164220900 0;
+BA_ "VFrameFormat" BO_ 2164220900 3;
+BA_ "GenMsgCycleTime" BO_ 2164220644 500;
+BA_ "GenMsgSendType" BO_ 2164220644 0;
+BA_ "VFrameFormat" BO_ 2164220644 3;
+BA_ "GenMsgCycleTime" BO_ 2164220388 500;
+BA_ "GenMsgSendType" BO_ 2164220388 0;
+BA_ "VFrameFormat" BO_ 2164220388 3;
+BA_ "GenMsgSendType" BO_ 2164220132 0;
+BA_ "GenMsgCycleTime" BO_ 2164220132 500;
+BA_ "VFrameFormat" BO_ 2164220132 3;
+BA_ "GenMsgCycleTime" BO_ 2164221411 500;
+BA_ "GenMsgSendType" BO_ 2164221411 0;
+BA_ "VFrameFormat" BO_ 2164221411 3;
+BA_ "GenMsgCycleTime" BO_ 2164221155 500;
+BA_ "GenMsgSendType" BO_ 2164221155 0;
+BA_ "VFrameFormat" BO_ 2164221155 3;
+BA_ "GenMsgCycleTime" BO_ 2164220899 500;
+BA_ "GenMsgSendType" BO_ 2164220899 0;
+BA_ "VFrameFormat" BO_ 2164220899 3;
+BA_ "GenMsgCycleTime" BO_ 2164220643 500;
+BA_ "GenMsgSendType" BO_ 2164220643 0;
+BA_ "VFrameFormat" BO_ 2164220643 3;
+BA_ "GenMsgSendType" BO_ 2164220387 0;
+BA_ "GenMsgCycleTime" BO_ 2164220387 500;
+BA_ "VFrameFormat" BO_ 2164220387 3;
+BA_ "GenMsgSendType" BO_ 2164220131 0;
+BA_ "GenMsgCycleTime" BO_ 2164220131 500;
+BA_ "VFrameFormat" BO_ 2164220131 3;
+BA_ "GenMsgSendType" BO_ 2164212196 0;
+BA_ "GenMsgCycleTime" BO_ 2164212196 50;
+BA_ "VFrameFormat" BO_ 2164212196 3;
+BA_ "GenMsgSendType" BO_ 2164212195 0;
+BA_ "GenMsgCycleTime" BO_ 2164212195 50;
+BA_ "VFrameFormat" BO_ 2164212195 3;
+BA_ "GenMsgSendType" BO_ 2164211940 0;
+BA_ "GenMsgCycleTime" BO_ 2164211940 50;
+BA_ "VFrameFormat" BO_ 2164211940 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164211939 50;
+BA_ "GenMsgCycleTime" BO_ 2164211939 50;
+BA_ "GenMsgSendType" BO_ 2164211939 0;
+BA_ "VFrameFormat" BO_ 2164211939 3;
+BA_ "GenMsgCycleTime" BO_ 2164208612 50;
+BA_ "GenMsgSendType" BO_ 2164208612 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164208612 20;
+BA_ "VFrameFormat" BO_ 2164208612 3;
+BA_ "GenMsgCycleTime" BO_ 2164208356 50;
+BA_ "GenMsgSendType" BO_ 2164208356 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164208356 20;
+BA_ "VFrameFormat" BO_ 2164208356 3;
+BA_ "GenMsgCycleTime" BO_ 2164208611 50;
+BA_ "GenMsgSendType" BO_ 2164208611 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164208611 20;
+BA_ "VFrameFormat" BO_ 2164208611 3;
+BA_ "GenMsgCycleTime" BO_ 2164208355 50;
+BA_ "GenMsgSendType" BO_ 2164208355 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164208355 20;
+BA_ "VFrameFormat" BO_ 2164208355 3;
+BA_ "GenMsgCycleTime" BO_ 2164208100 50;
+BA_ "GenMsgSendType" BO_ 2164208100 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164208100 20;
+BA_ "VFrameFormat" BO_ 2164208100 3;
+BA_ "GenMsgCycleTime" BO_ 2164208099 50;
+BA_ "GenMsgSendType" BO_ 2164208099 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164208099 20;
+BA_ "VFrameFormat" BO_ 2164208099 3;
+BA_ "GenMsgCycleTime" BO_ 2164207844 50;
+BA_ "GenMsgSendType" BO_ 2164207844 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164207844 20;
+BA_ "VFrameFormat" BO_ 2164207844 3;
+BA_ "GenMsgCycleTime" BO_ 2164207843 50;
+BA_ "GenMsgSendType" BO_ 2164207843 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2164207843 20;
+BA_ "VFrameFormat" BO_ 2164207843 3;
+BA_ "GenMsgSendType" BO_ 2164199652 0;
+BA_ "GenMsgCycleTime" BO_ 2164199652 100;
+BA_ "VFrameFormat" BO_ 2164199652 3;
+BA_ "GenMsgCycleTimeFast" BO_ 2164199651 100;
+BA_ "GenMsgSendType" BO_ 2164199651 0;
+BA_ "GenMsgCycleTime" BO_ 2164199651 100;
+BA_ "VFrameFormat" BO_ 2164199651 3;
+BA_ "SPN" SG_ 3221225472 PowerTakeoffSetSpeed 187;
+BA_ "SPN" SG_ 3221225472 PowerTakeoffSpeed 186;
+BA_ "SPN" SG_ 2566799409 WorkLights 2386;
+BA_ "SPN" SG_ 2566799409 TractorClearanceLight 2386;
+BA_ "SPN" SG_ 2566799409 LeftTurnSignalLights 2386;
+BA_ "SPN" SG_ 2566799409 RightTurnSignalLights 2370;
+BA_ "SPN" SG_ 2566799409 RotatingBeaconLight 2386;
+BA_ "SPN" SG_ 2566799409 HighBeamHeadLight 2348;
+BA_ "SPN" SG_ 2566799409 LowBeamHeadLight 2350;
+BA_ "SigType" SG_ 2565472289 RequestedPGN 6;
+BA_ "SPN" SG_ 2565472289 RequestedPGN 2540;
+BA_ "SigType" SG_ 2565472305 RequestedPGN 6;
+BA_ "SPN" SG_ 2565472305 RequestedPGN 2540;
+BA_ "SPN" SG_ 2566841088 EngineReferenceTorque 544;
+BA_ "SigType" SG_ 2565537576 RequestedPGN 6;
+BA_ "SPN" SG_ 2565537576 RequestedPGN 2540;
+BA_ "SigType" SG_ 2565472296 RequestedPGN 6;
+BA_ "SPN" SG_ 2565472296 RequestedPGN 2540;
+BA_ "SPN" SG_ 2566834822 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834822 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834822 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834822 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834822 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834822 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834822 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834822 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834822 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834822 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834822 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834821 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834821 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834821 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834821 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834821 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834821 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834821 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834821 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834821 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834821 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834821 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834820 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834820 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834820 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834820 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834820 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834820 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834820 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834820 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834820 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834820 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834820 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834819 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834819 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834819 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834819 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834819 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834819 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834819 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834819 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834819 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834819 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834819 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834818 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834818 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834818 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834818 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834818 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834818 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834818 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834818 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834818 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834818 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834818 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834817 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834817 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834817 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834817 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834817 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834817 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834817 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834817 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834817 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834817 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834817 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834816 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834816 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834816 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834816 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834816 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834816 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834816 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834816 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834816 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834816 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834816 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834691 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834691 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834691 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834691 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834691 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834691 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834691 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834691 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834691 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834691 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834691 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834743 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834743 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834743 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834743 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834743 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834743 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834743 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834743 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834743 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834743 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834743 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834913 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834913 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834913 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834913 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834913 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834913 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834913 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834913 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834913 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834913 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834913 ProtectLamp 987;
+BA_ "SPN" SG_ 2566834740 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834740 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834740 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834740 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834740 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834740 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834740 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834740 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834740 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834740 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834740 ProtectLamp 987;
+BA_ "SigType" SG_ 2566795298 AVC_ValvePortFlowCmd 1;
+BA_ "GenSigSendType" SG_ 2566795298 AVC_ValvePortFlowCmd 0;
+BA_ "SigType" SG_ 2566795298 AVC_ValveFailsafeModeCmd 1;
+BA_ "GenSigSendType" SG_ 2566795298 AVC_ValveFailsafeModeCmd 0;
+BA_ "SigType" SG_ 2566787200 AVE_ValveFailsafeMode 1;
+BA_ "GenSigSendType" SG_ 2566787200 AVE_ValveFailsafeMode 0;
+BA_ "GenSigStartValue" SG_ 2566787200 AVE_RetractEstimatedFlow 125;
+BA_ "GenSigStartValue" SG_ 2566787200 AVE_ExtendEstimatedFlow 125;
+BA_ "SPN" SG_ 2566831438 FanSpeed 1639;
+BA_ "SPN" SG_ 2566831438 FanDriveState 977;
+BA_ "SPN" SG_ 2566831438 EstimatedPercentFanSpeed 975;
+BA_ "SPN" SG_ 2566840369 TotalVehicleDistance 245;
+BA_ "SPN" SG_ 2566840369 TripDistance 244;
+BA_ "GenSigStartValue" SG_ 2566847537 CargoAmbientTemperature 8736;
+BA_ "SPN" SG_ 2566847537 CargoAmbientTemperature 169;
+BA_ "SPN" SG_ 2566847537 FuelLevel_2 38;
+BA_ "SPN" SG_ 2566847537 EngineOilFilterDiffPressure 99;
+BA_ "SPN" SG_ 2566847537 EngineFuelFilterDiffPressure 95;
+BA_ "SPN" SG_ 2566847537 FuelLevel_1 96;
+BA_ "SPN" SG_ 2566847537 WasherFluidLevel 80;
+BA_ "SigType" SG_ 2566838784 SoftwareIdentification 3;
+BA_ "SPN" SG_ 2566838784 SoftwareIdentification 234;
+BA_ "SPN" SG_ 2566838784 NumberSwIdentificationFields 965;
+BA_ "GenSigStartValue" SG_ 2566824960 EngineOilTemperature2 8736;
+BA_ "SPN" SG_ 2566824960 EngineOilTemperature2 1135;
+BA_ "GenSigStartValue" SG_ 2566824960 EngineECUTemperature 8736;
+BA_ "SPN" SG_ 2566824960 EngineECUTemperature 1136;
+BA_ "SPN" SG_ 2566802993 Status2OfDoors 3411;
+BA_ "SPN" SG_ 2566802993 Ramp_WheelChairLiftPosition 1820;
+BA_ "SPN" SG_ 2566802993 PositionOfDoors 1821;
+BA_ "SPN" SG_ 2365484270 TachographVehicleSpeed 1624;
+BA_ "SPN" SG_ 2566834688 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834688 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834688 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834688 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834688 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834688 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834688 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834688 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834688 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834688 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834688 ProtectLamp 987;
+BA_ "SPN" SG_ 2566841344 EngineWaitStartLamp 1081;
+BA_ "GenSigStartValue" SG_ 2364539894 EstimatedPumpingPercentTorque 125;
+BA_ "SPN" SG_ 2364539894 EstimatedPumpingPercentTorque 5398;
+BA_ "SPN" SG_ 2364539894 ActualMaxAvailableEngineTorque 3357;
+BA_ "SPN" SG_ 2364539894 SCRThermalManagementActive 5400;
+BA_ "SPN" SG_ 2364539894 DPFThermalManagementActive 5399;
+BA_ "SPN" SG_ 2364539894 MomentaryEngineMaxPowerFeedback 5021;
+BA_ "SPN" SG_ 2364539894 VehicleAccelRateLimitStatus 2979;
+BA_ "SPN" SG_ 2364539894 RemoteAcceleratorPedalPosition 974;
+BA_ "SPN" SG_ 2364539894 EnginePercentLoadAtCurrentSpeed 92;
+BA_ "SPN" SG_ 2364539894 RoadSpeedLimitStatus 1437;
+BA_ "SPN" SG_ 2364539894 AcceleratorPedalPosition2 29;
+BA_ "SPN" SG_ 2364539894 AcceleratorPedalPosition1 91;
+BA_ "SPN" SG_ 2364539894 AcceleratorPedalKickdownSwitch 559;
+BA_ "SPN" SG_ 2364539894 AcceleratorPedal2LowIdleSwitch 2970;
+BA_ "SPN" SG_ 2364539894 AcceleratorPedal1LowIdleSwitch 558;
+BA_ "SPN" SG_ 2566848256 Water_InFuel_Indicator 97;
+BA_ "SPN" SG_ 2566846208 KeyswitchBatteryPotential 158;
+BA_ "SPN" SG_ 2566846208 BatteryPotential 168;
+BA_ "SPN" SG_ 2566844928 EngineInstantaneousFuelEconomy 184;
+BA_ "SPN" SG_ 2566844928 EngineFuelRate 183;
+BA_ "GenSigStartValue" SG_ 2566845952 EngineIntakeManifold1Temperature 40;
+BA_ "SPN" SG_ 2566845952 EngineIntakeManifold1Temperature 105;
+BA_ "SPN" SG_ 2566845952 EngineIntakeManifold1Pressure 102;
+BA_ "GenSigStartValue" SG_ 2566845952 EngineExhaustGasTemperature 8736;
+BA_ "SPN" SG_ 2566845952 EngineExhaustGasTemperature 173;
+BA_ "SPN" SG_ 2566845952 EngineAirIntakePressure 106;
+BA_ "SPN" SG_ 2566845952 EngineAirFilter1DiffPressure 107;
+BA_ "GenSigStartValue" SG_ 2566845696 RoadSurfaceTemperature 8736;
+BA_ "SPN" SG_ 2566845696 RoadSurfaceTemperature 79;
+BA_ "GenSigStartValue" SG_ 2566845696 EngineAirIntakeTemperature 40;
+BA_ "GenSigStartValue" SG_ 2566845696 AmbientAirTemperature 8736;
+BA_ "SPN" SG_ 2566845696 AmbientAirTemperature 171;
+BA_ "GenSigStartValue" SG_ 2566845696 Cab_InteriorTemperature 8736;
+BA_ "SPN" SG_ 2566845696 Cab_InteriorTemperature 170;
+BA_ "SPN" SG_ 2566845696 BarometricPressure 108;
+BA_ "GenSigStartValue" SG_ 2566840064 EngineParasiticLossPercentTorque 125;
+BA_ "SPN" SG_ 2566840064 EngineParasiticLossPercentTorque 2978;
+BA_ "SPN" SG_ 2566840064 EngineDesiredOpSpeedAsymyAdj 519;
+BA_ "SPN" SG_ 2566840064 EngineDesiredOperatingSpeed 515;
+BA_ "GenSigStartValue" SG_ 2566840064 NominalFrictionPercentTorque 125;
+BA_ "SPN" SG_ 2566840064 NominalFrictionPercentTorque 514;
+BA_ "GenSigStartValue" SG_ 2364539648 EstimatedPumpingPercentTorque 125;
+BA_ "SPN" SG_ 2364539648 EstimatedPumpingPercentTorque 5398;
+BA_ "SPN" SG_ 2364539648 ActualMaxAvailableEngineTorque 3357;
+BA_ "SPN" SG_ 2364539648 SCRThermalManagementActive 5400;
+BA_ "SPN" SG_ 2364539648 DPFThermalManagementActive 5399;
+BA_ "SPN" SG_ 2364539648 MomentaryEngineMaxPowerFeedback 5021;
+BA_ "SPN" SG_ 2364539648 VehicleAccelRateLimitStatus 2979;
+BA_ "SPN" SG_ 2364539648 RemoteAcceleratorPedalPosition 974;
+BA_ "SPN" SG_ 2364539648 EnginePercentLoadAtCurrentSpeed 92;
+BA_ "SPN" SG_ 2364539648 RoadSpeedLimitStatus 1437;
+BA_ "SPN" SG_ 2364539648 AcceleratorPedalPosition2 29;
+BA_ "SPN" SG_ 2364539648 AcceleratorPedalPosition1 91;
+BA_ "SPN" SG_ 2364539648 AcceleratorPedalKickdownSwitch 559;
+BA_ "SPN" SG_ 2364539648 AcceleratorPedal2LowIdleSwitch 2970;
+BA_ "SPN" SG_ 2364539648 AcceleratorPedal1LowIdleSwitch 558;
+BA_ "GenSigStartValue" SG_ 2566885425 ChassisRotateAngle 125;
+BA_ "SPN" SG_ 2566885425 ChassisRotateAngle 520192;
+BA_ "SPN" SG_ 2564827136 DieselPartFilterRegInhibitSw 3695;
+BA_ "SPN" SG_ 2564827136 DieselPartFilterRegForceSw 3696;
+BA_ "SPN" SG_ 2564827136 RequestedPercentFanSpeed 986;
+BA_ "SPN" SG_ 2566842624 EngineTotalFuelUsed 250;
+BA_ "SPN" SG_ 2566842624 EngineTripFuel 182;
+BA_ "SPN" SG_ 2566841600 EngineTotalRevolutions 249;
+BA_ "SPN" SG_ 2566841600 EngineTotalHoursOperation 247;
+BA_ "SPN" SG_ 2566842161 TotalPowerTakeoffHours 248;
+BA_ "SPN" SG_ 2566842161 TotalVehicleHours 246;
+BA_ "SPN" SG_ 2566890536 SystemUnixTime 0;
+BA_ "SPN" SG_ 2566834737 OccurrenceCount 1216;
+BA_ "SPN" SG_ 2566834737 SPNConversionMethod 1706;
+BA_ "SPN" SG_ 2566834737 FailureModeIdentifier 1215;
+BA_ "SPN" SG_ 2566834737 FlashRedStopLamp 3039;
+BA_ "SPN" SG_ 2566834737 FlashProtectLamp 3041;
+BA_ "SPN" SG_ 2566834737 FlashMalfunctionIndicatorLamp 3038;
+BA_ "SPN" SG_ 2566834737 FlashAmberWarningLamp 3040;
+BA_ "SPN" SG_ 2566834737 MalfunctionIndicatorLamp 1213;
+BA_ "SPN" SG_ 2566834737 RedStopLamp 623;
+BA_ "SPN" SG_ 2566834737 AmberWarningLamp 624;
+BA_ "SPN" SG_ 2566834737 ProtectLamp 987;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakePSupplyState2 2583;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakePSupplyState1 2582;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakeFluidLevelSwitch 2931;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakeAudibleWarning 2930;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakePWarning2 2585;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakePWarning1 2584;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakePressureCircuit2 2581;
+BA_ "SPN" SG_ 2365449777 HydraulicBrakePressureCircuit1 2580;
+BA_ "SPN" SG_ 2566882353 ChassisAngleSensCalibSts 520193;
+BA_ "SPN" SG_ 2566882353 SavedRightVoltage 520195;
+BA_ "SPN" SG_ 2566882353 SavedLeftVoltage 520194;
+BA_ "SPN" SG_ 2566882353 SavedCentreVoltage 520196;
+BA_ "SPN" SG_ 2566881329 OperatorSeatSwitchStatus 520512;
+BA_ "SPN" SG_ 2566844721 ClutchSwitch 598;
+BA_ "SPN" SG_ 2566844721 BrakeSwitch 597;
+BA_ "SPN" SG_ 2566844721 WheelBasedVehicleSpeed 84;
+BA_ "SPN" SG_ 2566844721 ParkingBrakeSwitch 70;
+BA_ "SPN" SG_ 2566827569 PneumaticSupplyPressure 46;
+BA_ "SPN" SG_ 2566809649 WinchOilPressureSwitch 1857;
+BA_ "GenSigStartValue" SG_ 2566809649 HydraulicTemperature 40;
+BA_ "SPN" SG_ 2566809649 HydraulicTemperature 1638;
+BA_ "SPN" SG_ 2566809649 HydraulicOilFilterRestrictionSw 1713;
+BA_ "SigType" SG_ 2565482545 RequestedPGN 6;
+BA_ "SPN" SG_ 2565482545 RequestedPGN 2540;
+BA_ "SPN" SG_ 2365558833 SteeringSystemPressure 160030;
+BA_ "SPN" SG_ 2566846257 KeyswitchBatteryPotential 158;
+BA_ "SPN" SG_ 2566846257 BatteryPotential 168;
+BA_ "SPN" SG_ 2566846257 ChargingSystemPotential 167;
+BA_ "SPN" SG_ 2566846257 AlternatorCurrent 115;
+BA_ "GenSigStartValue" SG_ 2566846257 NetBatteryCurrent 125;
+BA_ "SPN" SG_ 2566846257 NetBatteryCurrent 114;
+BA_ "SigType" SG_ 2566847025 ParkingBrakeRedWarningSignal 4;
+BA_ "SPN" SG_ 2566847025 ParkingBrakeRedWarningSignal 3557;
+BA_ "SPN" SG_ 2566847025 ParkingBrakeActuator 619;
+BA_ "GenSigStartValue" SG_ 2566847025 ParkBrakeReleaseInhibitStatus 3;
+BA_ "SPN" SG_ 2566847025 ParkBrakeReleaseInhibitStatus 3808;
+BA_ "SPN" SG_ 2566847025 BrakeSecondaryPressure 118;
+BA_ "SPN" SG_ 2566847025 BrakePrimaryPressure 117;
+BA_ "SPN" SG_ 2566847025 BrakeApplicationPressure 116;
+BA_ "SPN" SG_ 2566844160 EngineOilPressure 100;
+BA_ "SPN" SG_ 2566844160 EngineOilLevel 98;
+BA_ "SPN" SG_ 2566844160 EngineFuelDeliveryPressure 94;
+BA_ "SPN" SG_ 2566844160 EngineExtCrankBlowPressure 22;
+BA_ "SPN" SG_ 2566844160 EngineCrankcasePressure 101;
+BA_ "GenSigStartValue" SG_ 2566844160 EngineCrankcasePressure 32000;
+BA_ "SPN" SG_ 2566844160 EngineCoolantPressure 109;
+BA_ "SPN" SG_ 2566844160 EngineCoolantLevel 111;
+BA_ "SPN" SG_ 2566843904 EngineTurboOilTemperature 176;
+BA_ "GenSigStartValue" SG_ 2566843904 EngineTurboOilTemperature 8736;
+BA_ "SPN" SG_ 2566843904 EngineOilTemperature_1 175;
+BA_ "GenSigStartValue" SG_ 2566843904 EngineOilTemperature_1 8736;
+BA_ "SPN" SG_ 2566843904 EngineIntercoolerThermostatOpn 1134;
+BA_ "GenSigStartValue" SG_ 2566843904 EngineIntercoolerThermostatOpn 0;
+BA_ "SPN" SG_ 2566843904 EngineIntercoolerTemperature 52;
+BA_ "GenSigStartValue" SG_ 2566843904 EngineIntercoolerTemperature 40;
+BA_ "SPN" SG_ 2566843904 EngineFuelTemperature_1 174;
+BA_ "GenSigStartValue" SG_ 2566843904 EngineFuelTemperature_1 40;
+BA_ "SPN" SG_ 2566843904 EngineCoolantTemperature 110;
+BA_ "GenSigStartValue" SG_ 2566843904 EngineCoolantTemperature 40;
+BA_ "SigType" SG_ 2364539904 DemandEnginePercentTorque 1;
+BA_ "GenSigStartValue" SG_ 2364539904 DemandEnginePercentTorque 125;
+BA_ "SPN" SG_ 2364539904 DemandEnginePercentTorque 512;
+BA_ "SPN" SG_ 2364539904 EngineTorqueMode 899;
+BA_ "SPN" SG_ 2364539904 EngineTorqueHighResolution 4154;
+BA_ "SPN" SG_ 2364539904 EngineStarterMode 1675;
+BA_ "GenSigStartValue" SG_ 2364539904 EngineDemandPercentTorque 125;
+BA_ "SPN" SG_ 2364539904 EngineDemandPercentTorque 2432;
+BA_ "SPN" SG_ 2364539904 EngineControl_SA 1483;
+BA_ "GenSigStartValue" SG_ 2364539904 EngineActualPercentTorque 125;
+BA_ "SPN" SG_ 2364539904 EngineActualPercentTorque 513;
+BA_ "SPN" SG_ 2364539904 EngineSpeed 190;
+BA_ "SigType" SG_ 2566796834 AVC_ValvePortFlowCmd 1;
+BA_ "GenSigSendType" SG_ 2566796834 AVC_ValvePortFlowCmd 0;
+BA_ "SigType" SG_ 2566796834 AVC_ValveFailsafeModeCmd 1;
+BA_ "GenSigSendType" SG_ 2566796834 AVC_ValveFailsafeModeCmd 0;
+BA_ "SigType" SG_ 2566796578 AVC_ValvePortFlowCmd 1;
+BA_ "GenSigSendType" SG_ 2566796578 AVC_ValvePortFlowCmd 0;
+BA_ "SigType" SG_ 2566796578 AVC_ValveFailsafeModeCmd 1;
+BA_ "GenSigSendType" SG_ 2566796578 AVC_ValveFailsafeModeCmd 0;
+BA_ "SigType" SG_ 2566796322 AVC_ValvePortFlowCmd 1;
+BA_ "GenSigSendType" SG_ 2566796322 AVC_ValvePortFlowCmd 0;
+BA_ "SigType" SG_ 2566796322 AVC_ValveFailsafeModeCmd 1;
+BA_ "GenSigSendType" SG_ 2566796322 AVC_ValveFailsafeModeCmd 0;
+BA_ "SigType" SG_ 2566796066 AVC_ValvePortFlowCmd 1;
+BA_ "GenSigSendType" SG_ 2566796066 AVC_ValvePortFlowCmd 0;
+BA_ "SigType" SG_ 2566796066 AVC_ValveFailsafeModeCmd 1;
+BA_ "GenSigSendType" SG_ 2566796066 AVC_ValveFailsafeModeCmd 0;
+BA_ "SigType" SG_ 2566795810 AVC_ValvePortFlowCmd 1;
+BA_ "GenSigSendType" SG_ 2566795810 AVC_ValvePortFlowCmd 0;
+BA_ "SigType" SG_ 2566795810 AVC_ValveFailsafeModeCmd 1;
+BA_ "GenSigSendType" SG_ 2566795810 AVC_ValveFailsafeModeCmd 0;
+BA_ "SigType" SG_ 2566795554 AVC_ValvePortFlowCmd 1;
+BA_ "GenSigSendType" SG_ 2566795554 AVC_ValvePortFlowCmd 0;
+BA_ "SigType" SG_ 2566795554 AVC_ValveFailsafeModeCmd 1;
+BA_ "GenSigSendType" SG_ 2566795554 AVC_ValveFailsafeModeCmd 0;
+BA_ "SigType" SG_ 2566788742 AVE_ValveFailsafeMode 1;
+BA_ "GenSigSendType" SG_ 2566788742 AVE_ValveFailsafeMode 0;
+BA_ "GenSigStartValue" SG_ 2566788742 AVE_RetractEstimatedFlow 125;
+BA_ "GenSigStartValue" SG_ 2566788742 AVE_ExtendEstimatedFlow 125;
+BA_ "SigType" SG_ 2566788485 AVE_ValveFailsafeMode 1;
+BA_ "GenSigSendType" SG_ 2566788485 AVE_ValveFailsafeMode 0;
+BA_ "GenSigStartValue" SG_ 2566788485 AVE_RetractEstimatedFlow 125;
+BA_ "GenSigStartValue" SG_ 2566788485 AVE_ExtendEstimatedFlow 125;
+BA_ "SigType" SG_ 2566788228 AVE_ValveFailsafeMode 1;
+BA_ "GenSigSendType" SG_ 2566788228 AVE_ValveFailsafeMode 0;
+BA_ "GenSigStartValue" SG_ 2566788228 AVE_RetractEstimatedFlow 125;
+BA_ "GenSigStartValue" SG_ 2566788228 AVE_ExtendEstimatedFlow 125;
+BA_ "SigType" SG_ 2566787971 AVE_ValveFailsafeMode 1;
+BA_ "GenSigSendType" SG_ 2566787971 AVE_ValveFailsafeMode 0;
+BA_ "GenSigStartValue" SG_ 2566787971 AVE_RetractEstimatedFlow 125;
+BA_ "GenSigStartValue" SG_ 2566787971 AVE_ExtendEstimatedFlow 125;
+BA_ "SigType" SG_ 2566787714 AVE_ValveFailsafeMode 1;
+BA_ "GenSigSendType" SG_ 2566787714 AVE_ValveFailsafeMode 0;
+BA_ "GenSigStartValue" SG_ 2566787714 AVE_RetractEstimatedFlow 125;
+BA_ "GenSigStartValue" SG_ 2566787714 AVE_ExtendEstimatedFlow 125;
+BA_ "SigType" SG_ 2566787457 AVE_ValveFailsafeMode 1;
+BA_ "GenSigSendType" SG_ 2566787457 AVE_ValveFailsafeMode 0;
+BA_ "GenSigStartValue" SG_ 2566787457 AVE_RetractEstimatedFlow 125;
+BA_ "GenSigStartValue" SG_ 2566787457 AVE_ExtendEstimatedFlow 125;
+BA_ "SigType" SG_ 2164199652 DI_STS_0 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_18 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_17 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_16 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_15 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_14 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_13 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_12 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_11 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_10 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_9 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_8 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_7 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_6 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_5 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_4 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_3 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_2 4;
+BA_ "SigType" SG_ 2164199652 DI_STS_1 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_0 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_18 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_17 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_16 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_15 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_14 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_13 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_12 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_11 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_10 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_9 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_8 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_7 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_6 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_5 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_4 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_3 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_2 4;
+BA_ "SigType" SG_ 2164199651 DI_STS_1 4;
+VAL_ 2566897192 FdSetMode 255 "Undef" 2 "ManualPwm" 1 "ManualRpm" 0 "Auto" ;
+VAL_ 2164217137 PWM_MODE_16 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164217137 PWM_MODE_15 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216881 PWM_MODE_14 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216881 PWM_MODE_13 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216881 PWM_MODE_12 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216625 PWM_MODE_9 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216625 PWM_MODE_11 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216625 PWM_MODE_10 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216369 PWM_MODE_8 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216369 PWM_MODE_7 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216369 PWM_MODE_6 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216113 PWM_MODE_5 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216113 PWM_MODE_4 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164216113 PWM_MODE_3 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164215857 PWM_MODE_2 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164215857 PWM_MODE_1 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164215857 PWM_MODE_0 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2566799400 KUO_FieldCmd_21 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_20 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_19 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_18 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_17 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_16 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_15 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_14 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_13 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_12 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566799400 KUO_FieldCmd_11 7 "White" 3 "Green" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_9 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_8 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_7 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_6 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_5 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_4 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_3 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_2 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_10 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566545960 KUO_BtnLightCmd_1 11 "Pink" 10 "Crimson" 9 "Gray" 8 "Purple" 7 "White" 6 "Cyan" 5 "Orange" 4 "Red" 3 "Green" 2 "Blue" 1 "Yellow" 0 "Off" ;
+VAL_ 2566881329 IgnitionStatus 15 "UNDEF" 3 "START" 2 "ON" 1 "ACC" 0 "OFF" ;
+VAL_ 2164225064 RiomUirModeConfig 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164225064 RiomPwmModeConfig 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164225064 RiomPwmFreqConfig 5 "1000Hz" 4 "500Hz" 3 "300Hz" 2 "200Hz" 1 "100Hz" 0 "Undef" ;
+VAL_ 2164225064 RiomPwmDiagConfig 1 "DiagOn" 0 "DiagOff" ;
+VAL_ 2164225064 RiomNiModeConfig 0 "PullUp_Off_Passive" 1 "PullUp_On_Active" ;
+VAL_ 2164225064 RiomSignalType 5 "PWM" 4 "NI" 3 "UIR" 2 "DO" 1 "DI" 0 "UNDEF" ;
+VAL_ 2164225073 RiomUirModeConfig 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164225073 RiomPwmModeConfig 3 "DISCRETE" 2 "CURRENT" 1 "PWM" 0 "Undef" ;
+VAL_ 2164225073 RiomPwmFreqConfig 5 "1000Hz" 4 "500Hz" 3 "300Hz" 2 "200Hz" 1 "100Hz" 0 "Undef" ;
+VAL_ 2164225073 RiomPwmDiagConfig 1 "DiagOn" 0 "DiagOff" ;
+VAL_ 2164225073 RiomNiModeConfig 0 "PullUp_Off_Passive" 1 "PullUp_On_Active" ;
+VAL_ 2164225073 RiomSignalType 5 "PWM" 4 "NI" 3 "UIR" 2 "DO" 1 "DI" 0 "UNDEF" ;
+VAL_ 2164224808 RiomSignalType 5 "PWM" 4 "NI" 3 "UIR" 2 "DO" 1 "DI" 0 "UNDEF" ;
+VAL_ 2164224817 RiomSignalType 5 "PWM" 4 "NI" 3 "UIR" 2 "DO" 1 "DI" 0 "UNDEF" ;
+VAL_ 2164221412 PWM_STS_16 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221412 PWM_STS_15 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221156 PWM_STS_14 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221156 PWM_STS_13 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221156 PWM_STS_12 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220900 PWM_STS_9 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220900 PWM_STS_11 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220900 PWM_STS_10 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220644 PWM_STS_8 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220644 PWM_STS_7 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220644 PWM_STS_6 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220388 PWM_STS_5 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220388 PWM_STS_4 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220388 PWM_STS_3 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220132 PWM_STS_2 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220132 PWM_STS_1 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220132 PWM_STS_0 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221411 PWM_STS_16 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221411 PWM_STS_15 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221155 PWM_STS_14 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221155 PWM_STS_13 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164221155 PWM_STS_12 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220899 PWM_STS_9 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220899 PWM_STS_11 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220899 PWM_STS_10 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220643 PWM_STS_8 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220643 PWM_STS_7 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220643 PWM_STS_6 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220387 PWM_STS_5 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220387 PWM_STS_4 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220387 PWM_STS_3 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220131 PWM_STS_2 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220131 PWM_STS_1 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164220131 PWM_STS_0 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164212196 NI_STS_4 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164212196 NI_STS_3 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164212195 NI_STS_4 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164212195 NI_STS_3 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164211940 NI_STS_2 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164211940 NI_STS_1 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164211940 NI_STS_0 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164211939 NI_STS_2 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164211939 NI_STS_1 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164211939 NI_STS_0 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208612 UIR_MODE_11 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208612 UIR_MODE_10 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208612 UIR_MODE_9 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208612 UIR_STS_9 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208612 UIR_STS_11 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208612 UIR_STS_10 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208356 UIR_MODE_8 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208356 UIR_MODE_7 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208356 UIR_MODE_6 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208356 UIR_STS_8 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208356 UIR_STS_7 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208356 UIR_STS_6 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208611 UIR_MODE_11 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208611 UIR_MODE_10 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208611 UIR_MODE_9 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208611 UIR_STS_9 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208611 UIR_STS_11 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208611 UIR_STS_10 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208355 UIR_MODE_8 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208355 UIR_MODE_7 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208355 UIR_MODE_6 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208355 UIR_STS_8 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208355 UIR_STS_7 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208355 UIR_STS_6 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208100 UIR_STS_5 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208100 UIR_STS_4 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208100 UIR_STS_3 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208100 UIR_MODE_5 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208100 UIR_MODE_4 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208100 UIR_MODE_3 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208099 UIR_STS_5 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208099 UIR_STS_4 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208099 UIR_STS_3 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164208099 UIR_MODE_5 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208099 UIR_MODE_4 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164208099 UIR_MODE_3 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164207844 UIR_MODE_2 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164207844 UIR_MODE_1 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164207844 UIR_MODE_0 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164207844 UIR_STS_2 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164207844 UIR_STS_1 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164207844 UIR_STS_0 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164207843 UIR_MODE_2 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164207843 UIR_MODE_1 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164207843 UIR_MODE_0 3 "Resistance" 2 "Current" 1 "Voltage" 0 "Undef" ;
+VAL_ 2164207843 UIR_STS_2 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164207843 UIR_STS_1 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+VAL_ 2164207843 UIR_STS_0 3 "Undef" 2 "Short to Gnd" 1 "Brake" 0 "Normal" ;
+

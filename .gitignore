@@ -1,0 +1,79 @@
+# Matlab/Simulink git ignore file
+# description all include/exclude files in matlab/simulink-project 
+# for code generation project only
+
+# Exclude all other files
+*.*
+# Exclude all other folders in project with files
+/**/*.*
+**/*ert*/*
+**/slprj/*
+
+# Exclude temporary files
+~*.*
+
+
+# Include services files for GIT
+!.gitignore
+!.git
+!.gitmodule
+!.gitmodules
+
+# Please add here all folders form project (if exist)
+#!*/
+!/cacheFiles/*.gitkeep
+!/resources/**/*.xml
+!/resources/**/**/*.xml
+
+!/libs_stm32/**/*.c
+!/libs_stm32/**/*.h
+!/libs_stm32/**/*.slx
+
+
+# Dbc Folder
+!/dbcFiles/*.gitkeep
+!/dbcFiles/*.dbc
+!/dbcFiles/*.db
+
+# BswLibs folder
+
+# Functions folder
+!/functions/*.gitkeep
+
+# Test folder
+!/tests/*.gitkeep
+!/tests/*.mldatx
+!/tests/*.slx
+!/tests/*.slmx
+!/tests/*.m
+
+# Types folder
+!/types/*.m
+!/types/*.sldd
+!/types/*.gitkeep
+
+# Include matlab and simulink files
+# only in root folder
+!/*.slx
+!/*.xlsx
+!/*.slreqx
+!/*.slmx
+!/*.mat
+!/*.xml
+!/*.m
+!*.prj
+
+# Include generated code
+!/*.zip
+!/codeGen/*.gitkeep
+!/codeGen/*.zip
+
+
+# Exclude example "main.c" file
+/*/**/*main.c
+
+# Readme resurces
+#!*/
+!/README.md
+
+# end of gitignore file 

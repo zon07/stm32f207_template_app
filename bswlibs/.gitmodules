@@ -1,0 +1,3 @@
+[submodule "sharedtypes"]
+	path = sharedtypes
+	url = https://agrodigit.gitlab.yandexcloud.net/agdtpro/embedded/matlab/commonlibs/sharedtypes.git

@@ -1,0 +1,8 @@
+#ifndef _BSW_VERSION_DEFINES_H
+#define _BSW_VERSION_DEFINES_H
+
+#define BSW_MAJOR_VERSION  (2U)
+#define BSW_MINOR_VERSION  (0U)
+
+
+#endif /* _BSW_VERSION_DEFINES_H */

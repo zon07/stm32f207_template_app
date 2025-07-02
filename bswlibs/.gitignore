@@ -1,0 +1,45 @@
+# Matlab/Simulink git ignore file
+# description all include/exclude files in matlab/simulink-project 
+# for code generation project only
+
+# Exclude all other files
+*.*
+# Exclude all other folders in project with files
+/**/*.*
+**/*ert*/*
+**/slprj/*
+# Exclude temporary files
+~*.*
+
+# Include services files for GIT
+!.gitignore
+!.git
+!.gitmodule
+!.gitmodules
+
+# Please add here all folders form project (if exist)
+#!*/
+
+# Include matlab and simulink cpp files
+!/*.cpp
+!/*.h
+!/*.sldd
+!/*.slx
+!/**/*.m
+
+!/**/*.gitkeep
+!/**/*.slx
+!/**/*.m
+
+!/**/**/*.gitkeep
+!/**/**/*.cpp
+!/**/**/*.h
+!/**/**/*.sldd
+!/**/**/*.slx
+!/**/*.m
+
+# Readme resurces
+#!*/
+!/README.md
+
+# end of gitignore file 
