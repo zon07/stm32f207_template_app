@@ -28,6 +28,7 @@
 !/libs_stm32/**/*.c
 !/libs_stm32/**/*.h
 !/libs_stm32/**/*.slx
+!/libs_stm32/**/*.sldd
 
 
 # Dbc Folder
