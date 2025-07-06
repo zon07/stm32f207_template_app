@@ -20,14 +20,14 @@ bool CanGetAllMessages(int32_t can, CAN_Msg_t *rxMsg)
     if (can == 0)  // CAN1
     {
         // Пытаемся получить сообщение без ожидания (timeout = 0)
-        if (osMessageQueueGet(appCan1TxQueueHandle, rxMsg, NULL, 0) == osOK)
+        if (osMessageQueueGet(appCan1RxQueueHandle, rxMsg, NULL, 0) == osOK)
         {
             return true;
         }
     }
     else if (can == 1)  // CAN2
     {
-        if (osMessageQueueGet(appCan2TxQueueHandle, rxMsg, NULL, 0) == osOK)
+        if (osMessageQueueGet(appCan2RxQueueHandle, rxMsg, NULL, 0) == osOK)
         {
             return true;
         }
